@@ -1,0 +1,143 @@
+---
+title: "Raster with R"
+author: "inSileco Team"
+date: "2020/12/15"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  dev = "png",
+  dpi = 108,
+  fig.width = 6,
+  fig.height = 4.5,
+  fig.align = 'center',
+  width = 120
+)
+rfa <- function(...) icon::fontawesome(...)
+```
+
+
+class: title-slide, middle
+
+
+## .font200[`r icon::fontawesome("r-project")`asters]
+
+<br>
+
+.instructors[
+  .font180[Manipulate rasters with `r rfa("r-project")`]
+  <br><br><br>
+  .authors140[David Beauchesne & Kevin Cazelles]
+  <br><br>
+  `r format(Sys.time(), '%B %d, %Y')`
+  <br>
+  .font200[
+  [`r rfa("github")`](https://github.com/inSilecoInc)
+  [`r rfa("database")`](link_to_data)
+  [`r rfa("file-pdf")`](link_to_pdf_version)
+  ]
+]
+
+<br>
+<img src="img/logoW.png" width="140px"></img>
+
+![deploy workshop](https://github.com/inSilecoInc/workshop_raster/workflows/deploy%20workshop/badge.svg)
+
+.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified]
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Learning objectives
+
+![:custom_hr]()
+
+## .font160[`r rfa("map")`  + `r rfa("r-project")`]
+
+
+---
+
+# Learning objectives
+
+<br>
+
+### Main Goal
+
+--
+
+1. L.O. 1 
+
+1. L.O. 2
+
+
+
+---
+
+class: inverse, center, middle
+
+# `r rfa("info-circle")` Rationalize
+
+![:custom_hr]()
+
+## Why (`r icon::fontawesome("clock")` ~ 15min)
+
+
+???
+
+If after the workshop what follows makes sense and you feel it is kind of true, it would a success. 
+
+
+
+---
+# Plot
+
+```{R plot1}
+plot(1,1)
+```
+
+
+---
+# Exercice 
+
+### Description
+
+```{r, echo = FALSE, purl = FALSE}
+countdown::countdown(minutes = 15, seconds = 0)
+```
+
+
+---
+# Resources `r rfa("link")`
+
+### Add ressources here 
+
+- [Geocomputation with R](https://geocompr.robinlovelace.net/)
+
+
+---
+# Last slides
+
+## About inSileco
+
+--
+
+## About us
