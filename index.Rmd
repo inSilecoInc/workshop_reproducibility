@@ -1,7 +1,6 @@
 ---
-title: "Raster with R"
+title: "About reproducibility"
 author: "inSileco Team"
-date: "2020/12/15"
 output:
   xaringan::moon_reader:
     css: [default, rd.css, rd-font.css, "hygge"]
@@ -40,7 +39,7 @@ class: title-slide, middle
 <br>
 
 .instructors[
-  .font180[Manipulate rasters with `r rfa("r-project")`]
+  .font180[About reproducibility]
   <br><br><br>
   .authors140[David Beauchesne & Kevin Cazelles]
   <br><br>
@@ -56,9 +55,9 @@ class: title-slide, middle
 <br>
 <img src="img/logoW.png" width="140px"></img>
 
-![deploy workshop](https://github.com/inSilecoInc/workshop_raster/workflows/deploy%20workshop/badge.svg)
+![deploy workshop](https://github.com/inSilecoInc/workshop_reproducibility/workflows/deploy%20workshop/badge.svg)
 
-.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified]
+.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
 
 
 
@@ -103,8 +102,7 @@ class: inverse, center, middle
 
 ???
 
-If after the workshop what follows makes sense and you feel it is kind of true, it would a success. 
-
+Comments
 
 
 ---
@@ -130,13 +128,20 @@ countdown::countdown(minutes = 15, seconds = 0)
 
 ### Add ressources here 
 
-- [Geocomputation with R](https://geocompr.robinlovelace.net/)
+- [rOpenSci](https://ropensci.org/)
+- [*What does research reproducibility mean?*](https://stm.sciencemag.org/content/8/341/341ps12.full)
+- [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
+- [Reproducible Analysis With R](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/)
 
 
 ---
 # Last slides
 
 ## About inSileco
+
+- inSileco https://github.com/inSilecoInc
+- David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
+- Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
 
 --
 
