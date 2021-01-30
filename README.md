@@ -1,2 +1,3 @@
-# Template for R workshops
-![deploy workshop](https://github.com/inSilecoInc/workshop_R_template/workflows/deploy%20workshop/badge.svg)
+# workshops Reproducibility
+
+![deploy workshop](https://github.com/inSilecoInc/workshop_reproducibility/workflows/deploy%20workshop/badge.svg)

@@ -13,7 +13,6 @@ output:
 ---
 
 
-
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   comment = "#>",
@@ -79,13 +78,9 @@ class: inverse, center, middle
 
 <br>
 
-### Main Goal
+### Understand the importance of reproducibility and why R is powerful 
 
---
-
-1. L.O. 1 
-
-1. L.O. 2
+### Being able to create a simple R Markdown document including a reproducible analysis 
 
 
 
@@ -126,23 +121,72 @@ countdown::countdown(minutes = 15, seconds = 0)
 ---
 # Resources `r rfa("link")`
 
-### Add ressources here 
+### Reproducibility
 
-- [rOpenSci](https://ropensci.org/)
+- [Barba-group reproducibility syllabus](https://medium.com/hackernoon/barba-group-reproducibility-syllabus-e3757ee635cf#.h603izuwo)
 - [*What does research reproducibility mean?*](https://stm.sciencemag.org/content/8/341/341ps12.full)
-- [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
-- [Reproducible Analysis With R](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/)
+- [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
+- [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
+- [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
+
+---
+# Resources `r rfa("link")`
+
+### OSF
+
+- [COS: Strategic Plan, v2.0](https://docs.google.com/document/d/1sqz3appQ73vqa6fP1Gy8KK8HZpotoSGaiJC1XQuvREI/edit)
+- [50 cancer studies](https://www.sciencemag.org/news/2018/07/plan-replicate-50-high-impact-cancer-papers-shrinks-just-18)
+- [Reproducibility Project: Cancer Biology](https://elifesciences.org/collections/9b1e83d1/reproducibility-project-cancer-biology)
 
 
 ---
-# Last slides
+# Resources `r rfa("link")`
 
-## About inSileco
+### Research Compendium 
 
-- inSileco https://github.com/inSilecoInc
+- [rOpenSci](https://ropensci.org/)
+- [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
+- [Reproducible Analysis With R](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/)
+- [Touchdown your research with Rmarkdown](https://insileco.github.io/ResearchDown/#1)
+- [Formation FRB-Cesab & GDR EcoStat (fr)](https://frbcesab.github.io/datatoolbox/index.html#1)
+- [Research Compendium](https://research-compendium.science/) landing page
+- [rrrpkg](https://github.com/ropensci/rrrpkg)
+- [rrtools](https://github.com/benmarwick/rrtools)
+
+
+
+
+---
+# Quote
+
+
+> we propose to ally the word reproducibility—currently the most widely used
+> single term in this domain—with descriptors for the underlying construct This
+> yields three terms: methods reproducibility, results reproducibility, and
+> inferential reproducibility. (Goodman, 2016)
+ 
+
+---
+# Different R version different results
+
+
+```R
+# R 3.6
+df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
+plot(val ~ fact, data = df)   # works 
+# R 4.0
+df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
+plot(val ~ fact, data = df)   # does not work
+```
+
+
+
+---
+# inSileco
+
+<!-- LAST SLIDE -->
+
+- inSileco https://insilecoinc.github.io/
 - David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
 - Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
 
---
-
-## About us
