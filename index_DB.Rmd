@@ -1,0 +1,445 @@
+---
+title: "About reproducibility"
+author: "inSileco Team"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  dev = "png",
+  dpi = 108,
+  fig.width = 6,
+  fig.height = 4.5,
+  fig.align = 'center',
+  width = 120
+)
+rfa <- function(...) icon::fontawesome(...)
+```
+
+
+class: title-slide, middle
+
+
+## .font200[`r icon::fontawesome("r-project")`asters]
+
+<br>
+
+.instructors[
+  .font180[About reproducibility]
+  <br><br><br>
+  .authors140[David Beauchesne & Kevin Cazelles]
+  <br><br>
+  `r format(Sys.time(), '%B %d, %Y')`
+  <br>
+  .font200[
+  [`r rfa("github")`](https://github.com/inSilecoInc)
+  [`r rfa("database")`](link_to_data)
+  [`r rfa("file-pdf")`](link_to_pdf_version)
+  ]
+]
+
+<br>
+<img src="img/logoW.png" width="140px"></img>
+
+![deploy workshop](https://github.com/inSilecoInc/workshop_reproducibility/workflows/deploy%20workshop/badge.svg)
+
+.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
+
+
+
+
+---
+
+class: inverse, center, middle
+
+# Introduction to R Markdown
+
+![:custom_hr]()
+
+<img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="120px"></img>
+
+---
+
+# R Markdown <img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="50px"></img>
+
+## Markdown
+
+---
+
+class: inverse, center, middle
+
+# Basic anatomy
+
+![:custom_hr]()
+
+## .font160[**YAML** + `r rfa("markdown")` + `r rfa("r-project")`]
+
+---
+
+# Basic anatomy
+
+## R Markdown file `.Rmd`
+
+- Metadata / front matter (**YAML**)
+- Text / document content (`r rfa("markdown")`)
+- Code chunks (`r rfa("r-project")`)
+
+
+---
+
+class: inverse, center, middle
+
+# Metadata
+
+![:custom_hr]()
+
+## .font160[**YAML**]
+
+---
+
+# Metadata (**YAML**)
+
+- Contains the metadata of the document
+- Starts and ends with three dashes (---)
+- Comes first in the `.Rmd` file
+- Sets document options with `key: value` (YAML syntax)
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output:
+  html_document:
+    toc: true
+---
+```
+
+.font90[
+Options available depend on the output. See `?html_document `, `?pdf_document`, `?word_document`.
+
+More on this later
+]
+
+---
+
+class: inverse, center, middle
+
+# Text
+
+![:custom_hr]()
+
+## .font160[`r rfa("markdown")`]
+
+---
+
+# Text formatting (`r rfa("markdown")`)
+
+
+.pull-left[
+.font80[
+```md
+Normal text
+```
+]
+]
+
+.pull-right[
+.font80[Normal text]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+_Italic_ *text*
+```
+]
+]
+
+.pull-right[
+.font80[_Italic_ *text*]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+__Bold__ **text**
+```
+]
+]
+
+.pull-right[
+.font80[__Bold__ **text**]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+***Bold italic*** **_text_**
+```
+]
+]
+
+.pull-right[
+.font80[***Bold italic*** **_text_**]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+~~Strikethrough text~~
+```
+]
+]
+
+.pull-right[
+.font80[~~Strikethrough text~~]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+Exponent^text^
+```
+]
+]
+
+.pull-right[
+.font80[Exponent^{2}]
+]
+
+
+---
+
+# Document formatting (`r rfa("markdown")`)
+
+## Titles
+
+.pull-left[
+.font80[
+```md
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+```
+]
+]
+
+.pull-right[
+.font80[
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+]
+]
+
+---
+
+# Document formatting (`r rfa("markdown")`)
+
+## Paragraph
+
+
+.pull-left[
+.font80[
+```md
+Add an empty line to add
+
+a paragraph
+```
+]
+]
+
+.pull-right[
+.font80[
+Add an empty line to add
+
+a paragraph
+]
+]
+
+---
+
+# Document formatting (`r rfa("markdown")`)
+
+## Lists
+
+.font80[To create a list, use the following symbols: `-` or `*` or `+`]
+
+.font80[You must include an empty line between the beginning of the list and the preceding paragraph]
+
+--
+
+.pull-left[
+.font80[
+```md
+This is a list:
+
+- Element 1
+- Element 2
+- Element 3
+- Element 4
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a list:
+
+- Element 1
+- Element 2
+- Element 3
+- Element 4]
+]
+
+
+---
+
+# Document formatting (`r rfa("markdown")`)
+
+## Numbered lists
+
+.font80[To create a numbered list, use a number followed a `.`: `#.`.]
+
+.font80[No matter the order, `r rfa("markdown")` automatically adjusts the list numbers.]
+
+--
+
+.pull-left[
+.font80[
+```md
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+6. Element 3
+7. Element 4
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+6. Element 3
+7. Element 4
+]
+]
+
+---
+
+# Document formatting (`r rfa("markdown")`)
+
+## List indentations
+
+.font80[To indent elements of your list, use 2 spaces or a tabulation]
+
+--
+
+.pull-left[
+.font80[
+```md
+This is a numbered list:
+
+1. Element 1
+  - Element 1.1
+  - Element 1.2
+7. Element 2
+  8. Element 2.1
+  9. Element 2.2
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a numbered list:
+
+1. Element 1
+  - Element 1.1
+  - Element 1.2
+7. Element 2
+  8. Element 2.1
+  9. Element 2.2
+]
+]
+
+
+---
+
+# Document formatting (`r rfa("markdown")`)
+
+## New numbered lists
+
+.font80[To start a new numbered list (*i.e.* reinitialize numbers), use the tag `<!-- end -->` with an empty line before and afterthe tag]
+
+
+--
+
+.pull-left[
+.font80[
+```md
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+
+<!-- end -->
+
+6. Element 3
+7. Element 4
+```
+]
+]
+
+.pull-right[
+.font80[
+This is a numbered list:
+
+1. Element 1
+2. Element 2
+
+<!-- end -->
+
+6. Element 3
+7. Element 4
+]
+]
+
+
+
+<!-- rmarkdown::render('index_DB.Rmd') -->
