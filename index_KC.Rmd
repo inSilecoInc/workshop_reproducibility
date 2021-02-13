@@ -78,7 +78,7 @@ class: inverse, center, middle
 
 <br>
 
-### Understand the importance of reproducibility and why R is powerful 
+### Understand the importance reproducible research and why R is powerful 
 
 ### Being able to create a simple R Markdown document including a reproducible analysis 
 
@@ -88,7 +88,7 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# `r rfa("info-circle")` Rationalize
+# `r rfa("info-circle")` Reproducibility you said?
 
 ![:custom_hr]()
 
@@ -101,11 +101,135 @@ Comments
 
 
 ---
-# Plot
+# Reproducibility you said?
 
-```{R plot1}
-plot(1,1)
-```
+
+## Reproducibility
+
+--
+
+## Reproducibility vs. Replicability
+
+--
+
+## Reproducibility vs. Replicability vs. Generazability
+
+
+---
+# Reproducibility you said?
+
+
+## Since 19990 and pioneer work of XXX 
+
+## Terminology is not clear yet
+  - [](https://arxiv.org/abs/1802.03311)
+  - [R words]()
+
+## But it's getting  
+
+--- 
+# Reproducibility you said?
+
+<!-- INSERT SCHEME -->
+
+
+--- 
+# Reproducibility you said?
+
+<!-- INSERT DEFINITIONS of 2019 report -->
+
+
+---
+# Why does it matter ?
+
+Strengthen science fondation 
+
+<!-- INSERT FIGURE -->
+
+--- 
+# Openness and Reproducibility 
+
+
+---
+# A technical challenge 
+
+<!-- with definition retained we focus on 1 aspect that is technical -->
+
+<!-- a gold standard but seveal intermediaire step -->
+
+<!-- toward gold standard could mean a lot of techno and a lotr of time -->
+
+<!-- INSERT citation about time -->
+
+
+---
+# Is R suitable for Reproducible
+
+YES 
+
+Ropensci
+
+---
+
+class: inverse, center, middle
+
+# `r rfa("info-circle")` Reproducible workflows with R
+
+![:custom_hr]()
+
+## Why (`r icon::fontawesome("clock")` ~ 15min)
+
+
+???
+
+Mostly tips and structure of the R
+
+--- 
+# You are almost there 
+
+- input data in one place and never modify them afterwards
+
+- R scripts in one place 
+
+well... that's a very good beginning 
+
+
+---
+# Create a R folder 
+
+Create a meaningful set up 
+
+- R/
+- data/
+- doc/Rmd <- articulated pipeline 
+
+---
+# Create a R folder 
+
+Ensure that all code work from root; ensure form starts 
+
+attached an sessionInfo()
+
+
+---
+# Create a R folder 
+
+Use version comtrol 
+Make your in a remote/virtual machine...
+
+towards the gold standard, technologies are increasingly more complex 
+
+
+---
+# IMHO 
+
+- make data avaialble 
+- attached local repo in appendix, a zip file
+- sessionInfo()
+
+This would be just wonderful.... this would be a huge stepo. 
+
+At the end I'll talk about breofly about a set of R packages and other techno/software that allow omne to ge further,. 
 
 
 ---
@@ -128,6 +252,8 @@ countdown::countdown(minutes = 15, seconds = 0)
 - [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
 - [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
 - [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
+
+
 
 ---
 # Resources `r rfa("link")`
@@ -165,6 +291,25 @@ countdown::countdown(minutes = 15, seconds = 0)
 > yields three terms: methods reproducibility, results reproducibility, and
 > inferential reproducibility. (Goodman, 2016)
  
+> The fact that an analysis is reproducible does
+not guarantee the quality, correctness, or valid-
+ity of the published results. (Peng, 2011)
+
+
+> Unfortunately, the mere reproducibility of
+Reproducibility—the ability to recompute
+results—and replicability—the chances other
+experimenters will achieve a consistent
+result—are two foundational characteristics
+of successful scientific research. (Leek and Peng 2015)
+
+[Roger D. Peng](https://github.com/rdpeng)
+ 
+
+preregistration
+https://retractionwatch.com/
+https://www.sciencemag.org/news/2018/10/what-massive-database-retracted-papers-reveals-about-science-publishing-s-death-penalty 
+https://lorenabarba.com/
 
 ---
 # Different R version different results
