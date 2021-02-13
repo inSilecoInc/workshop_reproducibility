@@ -108,42 +108,6 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# Metadata
-
-![:custom_hr]()
-
-## .font160[**YAML**]
-
----
-
-# Metadata (**YAML**)
-
-- Contains the metadata of the document
-- Starts and ends with three dashes (---)
-- Comes first in the `.Rmd` file
-- Sets document options with `key: value` (YAML syntax)
-
-```yaml
----
-title: "My document title"
-date: "01-03-2021"
-author: Me, you, them
-output:
-  html_document:
-    toc: true
----
-```
-
-.font90[
-Options available depend on the output. See `?html_document `, `?pdf_document`, `?word_document`.
-
-More on this later
-]
-
----
-
-class: inverse, center, middle
-
 # Text
 
 ![:custom_hr]()
@@ -648,9 +612,48 @@ See this [website](https://cran.r-project.org/web/packages/kableExtra/vignettes/
 
 
 ---
+
+# `r rfa("markdown")` Mathematical equations and symbols
+
+Mathematical equations and symbols can be incorporated in the text using $L^AT_EX$ [syntax](https://en.wikibooks.org/wiki/LaTeX/Mathematics) and `$` tags.
+
+- Use single `$` for inline equations and symbols: `$math$`
+- Use double `$$` for equation blocks: <code>$$equation block$$ </code>
+
+--
+
+.pull-left[
+```md
+According to Einstein, mass-energy
+equivalence can be expressed as:
+
+$$E = mc^2$$,
+
+where $E$ is energy, $m$ is mass,
+and $c$ is the speed of light.
+```
+]
+
+.pull-right[
+.font90[
+According to Einstein, mass-energy
+equivalence can be expressed as:
+
+$$E = mc^2$$
+
+where $E$ is energy, $m$ is mass,
+and $c$ is the speed of light.
+]
+]
+
+
+
+
+---
+
 class: inverse, center, middle
 
-#  Code chunks
+#  `r rfa("code")` Code chunks
 
 <html><div style='float:left'></div><hr color='#ffdd55'style="margin-top: -60px;" size=1px width=720px></html>
 
@@ -658,7 +661,7 @@ class: inverse, center, middle
 
 ---
 
-# Chunks
+# `r rfa("code")` Code chunks
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(eval=FALSE)
@@ -683,7 +686,7 @@ head(iris)
 
 ---
 
-# Chunks
+# `r rfa("code")` Code chunks
 
 ### Code
 
@@ -704,7 +707,7 @@ head(iris)
 
 ---
 
-# Chunks
+# `r rfa("code")` Code chunks
 .pull-left[
 
 ### Code
@@ -745,7 +748,7 @@ ggplot(
 
 ---
 
-# Chunks
+# `r rfa("code")` Code chunks
 
 .pull-left[
 ### Code
@@ -774,7 +777,7 @@ leaflet(height=400, width=400) %>%
 
 ---
 
-# Chunks
+# `r rfa("code")` Code chunks
 
 .pull-left[
 ### Code
@@ -809,7 +812,7 @@ knitr::opts_chunk$set(eval=TRUE)
 
 ---
 
-# Inline chunks
+# `r rfa("code")` Inline code chunks
 
 ### `r rfa("code")` Syntax
 
@@ -844,7 +847,7 @@ class: inverse, center, middle
 
 ---
 
-# Chunks options
+# `r rfa("code")` Code chunk options
 
 
 .pull-left[
@@ -874,7 +877,7 @@ head(iris)
 
 ---
 
-# Chunk options
+# `r rfa("code")` Code chunk options
 
 Chunk output can be customised with [numerous options](https://yihui.name/knitr/options/):
 
@@ -884,7 +887,9 @@ str(knitr::opts_chunk$get())
 
 ---
 
-# Default options
+# `r rfa("code")` Code chunk options
+
+## Default options
 
 .pull-left[
 
@@ -910,7 +915,9 @@ head(iris)
 
 ---
 
-# Chunk option `echo`
+# `r rfa("code")` Code chunk options
+
+## Option `echo`
 
 .pull-left[
 
@@ -940,7 +947,9 @@ head(iris)
 
 ---
 
-# Chunk option `eval`
+# `r rfa("code")` Code chunk options
+
+## Option `eval`
 
 
 .pull-left[
@@ -966,7 +975,9 @@ head(iris)
 
 ---
 
-# Chunk option `include`
+# `r rfa("code")` Code chunk options
+
+## Option `include`
 
 .pull-left[
 ### `r rfa("code")` Syntax
@@ -989,7 +1000,9 @@ head(iris)
 
 ---
 
-# Chunk option `results`
+# `r rfa("code")` Code chunk options
+
+## Option `results`
 
 
 .pull-left[
@@ -1014,7 +1027,9 @@ head(iris)
 
 ---
 
-# Chunk option `results`
+# `r rfa("code")` Code chunk options
+
+## Option `results`
 
 .pull-left[
 ### `r rfa("code")` Syntax
@@ -1045,8 +1060,10 @@ ggplot(data = iris,
 
 ---
 
+# `r rfa("code")` Code chunk options
 
-# Chunk options `fig.height` & `fig.width`
+## Options `fig.height` & `fig.width`
+
 .pull-left[
 ### `r rfa("code")` Syntax
 ````md
@@ -1078,9 +1095,10 @@ ggplot(data = iris,
 - Note that options are separated by commas
 
 ---
-# Chunk options
 
-### What output each option suppresses?
+# `r rfa("code")` Code chunk options
+
+## What output each option suppresses?
 
 Option             | Run code | Show code | Output | Plots | Messages | Warnings
 -------------------|:--------:|:---------:|:------:|:-----:|:--------:|:-------:
@@ -1095,9 +1113,12 @@ Option             | Run code | Show code | Output | Plots | Messages | Warnings
 Table from [R for Data Science](https://r4ds.had.co.nz/r-markdown.html#chunk-options)
 
 ---
-# Global chunk options
 
-## Setup
+# `r rfa("code")` Code chunk options
+
+## Global code chunk options
+
+### Setup
 
 You can change the default chunk options for all following chunks in your document.
 
@@ -1114,6 +1135,229 @@ knitr::opts_chunk$set(
 ````
 
 ---
+
+class: inverse, center, middle
+
+# Metadata
+
+![:custom_hr]()
+
+## .font160[**YAML**]
+
+---
+
+# .font60[**YAML**] Metadata
+
+- Contains the metadata of the document
+- Starts and ends with three dashes (---)
+- Comes first in the `.Rmd` file
+- Sets *Pandoc* document options with `key: value` (.font60[**YAML**] syntax)
+- Available options depend on the output format .font90[(see `?html_document `, `?pdf_document`, `?word_document`)]
+
+--
+
+<br/>
+
+Minimal .font60[**YAML**] metadata for `r rfa("file-pdf")` PDF output:
+
+```yaml
+---
+output: pdf_document
+---
+```
+
+---
+
+# .font60[**YAML**] Metadata
+
+## Document information
+
+Title, author and date options
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output: pdf_document
+---
+```
+
+
+---
+
+# .font60[**YAML**] Metadata
+
+## Document options: table of content
+
+- To include a table of contents, use `toc: true`
+- To specify the depth of the table of contents, use `toc_depth = depth`
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+```
+
+.font90[
+`r rfa("exclamation-triangle")` Be sure to respect indentation, either 2 spaces or tabulations
+]
+
+---
+
+# .font60[**YAML**] Metadata
+
+## Document options: section numbers
+
+- To include numbered sections, use `number_sections: true`
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+---
+```
+
+--
+
+.font90[
+`r rfa("exclamation-triangle")` To avoid numbering a section, use `{-}` at the end of the section title
+
+```md
+# Section title {-}
+```
+]
+
+
+---
+
+# .font60[**YAML**] Metadata
+
+## Document options: figures options
+
+- To specify default figure size, use `fig_width: size` and `fig_height = size`
+- To include figure captions, use `fig_caption: true`
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output:
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    fig_width: 6
+    fig_height: 6
+    fig_caption: true
+---
+```
+
+---
+
+# .font60[**YAML**] Metadata
+
+## Document options: additional options
+
+- There is a wide variety of [.font60[**YAML**] options](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) available
+
+.font90[
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+abstract: "The objective of our work was to ..."
+fontfamily: fourier
+linestretch: 1
+fontsize: 10pt
+geometry: margin=1in
+urlcolor: red
+citecolor: blue
+output:
+  pdf_document:
+    toc: true
+  html_document:
+    toc: true
+  word_document:
+    toc: true
+---
+```
+]
+
+---
+
+class: inverse, center, middle
+
+# Exporting
+
+![:custom_hr]()
+
+## *aka* knitting 🧶
+
+---
+
+class: inverse, center, middle
+
+# Wrapping up for today
+
+![:custom_hr]()
+
+<img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="120px"></img>
+
+---
+
+
+# Output formats
+
+# `render()`
+
+---
+
+
+# Wrapping up
+
+✔️ **Document your document**: use YAML to set up meaningful metadata
+
+✔️ **Style your document**: use YAML to add options to your chosen output format
+
+✔️ **Organize your text**: use markdown headers with `#`
+
+✔️ **Organize your code**: use `knitr` chunk labels
+
+✔️ **Style your text**: use markdown **bold**, *italics*, `r rfa("list-ul")` bullets, `r rfa("list-ol")` lists, hyperlinks, ...
+
+✔️ **Style your output**: use `knitr` chunk options
+
+✔️ **Export your document**: use `rmarkdown::render()`
+
+---
+
+
+# `r rfa("book")` The `down` universe
+
+- Write a notebook: [`bookdown`](https://bookdown.org/)
+- Write a CSAS document: [`csasdown`](https://github.com/pbs-assess/csasdown)
+- Write a thesis: [`thesisdown`](https://github.com/ismayc/thesisdown)
+- Write a scientific article [`rticles`](https://github.com/rstudio/rticles)
+- Create a poster: [`posterdown`](https://github.com/brentthorne/posterdown)
+- Create nice presentation: [`xaringan`](https://github.com/yihui/xaringan)
+- Build a CV: [`vitae`](https://github.com/mitchelloharawild/vitae)
+- Generate a blog: [`blogdown`](https://bookdown.org/yihui/blogdown/)
+- Generate R package documentation: [`pkgdown`](https://pkgdown.r-lib.org/)
 
 
 <!-- rmarkdown::render('index_DB.Rmd') -->
