@@ -13,7 +13,6 @@ output:
 ---
 
 
-
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   comment = "#>",
@@ -94,9 +93,15 @@ class: inverse, center, middle
 
 ## R Markdown file `.Rmd`
 
+.pull-left[
 - Metadata / front matter (**YAML**)
 - Text / document content (`r rfa("markdown")`)
 - Code chunks (`r rfa("r-project")`)
+]
+
+.pull-right[
+<img src="img/rmd.png" style="vertical-align: middle" width="100%"></img>
+]
 
 
 ---
@@ -147,7 +152,7 @@ class: inverse, center, middle
 
 ---
 
-# Text formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Text formatting
 
 
 .pull-left[
@@ -223,19 +228,34 @@ __Bold__ **text**
 .pull-left[
 .font80[
 ```md
-Exponent^text^
+Supersript^text^
 ```
 ]
 ]
 
 .pull-right[
-.font80[Exponent^{2}]
+.font80[Superscript^2^]
 ]
+
+--
+
+.pull-left[
+.font80[
+```md
+Subscript~text~
+```
+]
+]
+
+.pull-right[
+.font80[Subscript~2~]
+]
+
 
 
 ---
 
-# Document formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Document formatting
 
 ## Titles
 
@@ -265,7 +285,7 @@ Exponent^text^
 
 ---
 
-# Document formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Document formatting
 
 ## Paragraph
 
@@ -290,7 +310,7 @@ a paragraph
 
 ---
 
-# Document formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Document formatting
 
 ## Lists
 
@@ -326,7 +346,7 @@ This is a list:
 
 ---
 
-# Document formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Document formatting
 
 ## Numbered lists
 
@@ -362,7 +382,7 @@ This is a numbered list:
 
 ---
 
-# Document formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Document formatting
 
 ## List indentations
 
@@ -401,7 +421,7 @@ This is a numbered list:
 
 ---
 
-# Document formatting (`r rfa("markdown")`)
+# `r rfa("markdown")` Document formatting
 
 ## New numbered lists
 
@@ -440,6 +460,672 @@ This is a numbered list:
 ]
 ]
 
+---
+
+# `r rfa("markdown")` Citations
+
+To add citations, use the `>` before the text
+
+--
+
+```md
+> This is a citation
+
+>> This is also a citation
+```
+
+> This is a citation
+
+>> This is also a citation
+
+---
+
+# `r rfa("markdown")` Footnotes
+
+To add footnotes, use:
+
+1. The tag `[^footnote]` in the text
+2. Description of the footnote anywhere later in the text
+
+--
+
+```md
+Ecosystem-based management[^ebm] seeks to address systemic management, monitoring and assessment issues for the environment
+
+...
+
+[^ebm]: See Christensen *et al.* 1996 for a detailed description of ecosystem-based management
+```
+
+Ecosystem-based management[^ebm] seeks to address systemic management, monitoring and assessment issues for the environment
+
+...
+
+.font80[^1^See Christensen *et al.* 1996 for a detailed description of ecosystem-based management]
+
+
+---
+
+# `r rfa("markdown")` Images
+
+To insert a figure, use: `![](path_to_figure)`
+
+```md
+![inSileco](img/logo.png)
+```
+
+.pull-left[
+<figure>
+  <img title="inSileco" src="img/logo.png" width="140px"></img>
+  <figcaption>inSileco</figcaption>
+</figure>
+]
+
+
+.pull-right[
+**Issue**:
+
+it is not possible to specify dimensions of figures using `r rfa("markdown")`
+
+**Solutions**:
+
+- [`html`](https://www.w3schools.com/tags/att_img_width.asp) syntax for `r rfa("html5")`
+- [`latex`](https://www.overleaf.com/learn/latex/Inserting_Images) syntax for `r rfa("file-pdf")`
+- Use `r rfa("r-project")` to plot figure as matrix and set dimensions with code chunks options (more on this later)
+]
+
+---
+
+# `r rfa("markdown")` Hyperlinks
+
+
+## Text as hyperlink
+
+To insert a hyperlink, use: `[text](url)`
+
+--
+
+```md
+Click [here](https://rmarkdown.rstudio.com/) to visit the `rmarkdown` website
+```
+
+Click [here](https://rmarkdown.rstudio.com/) to visit the `rmarkdown` website
+
+
+---
+
+# `r rfa("markdown")` Hyperlinks
+
+## External image
+
+To insert an external image, use: `![](url_to_image)`
+
+--
+
+```md
+![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)
+```
+
+![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)
+
+
+---
+
+# `r rfa("markdown")` Hyperlinks
+
+## Image as hyperlink
+
+To use an image as an external link, use: `[![](url_to_image)](url)`
+
+--
+
+.font70[
+```md
+[![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)](https://www.bloomberg.com/graphics/2020-us-election-results)
+```
+]
+
+[![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)](https://www.bloomberg.com/graphics/2020-us-election-results)
+
+---
+
+# `r rfa("markdown")` Hyperlinks
+
+## Link to section
+
+To add a link to a text section:
+
+- Add dentifier tag to section with `# Section {#tag}` (can be higher level sections).
+
+```md
+# Introduction {#intro}
+```
+
+--
+
+- Refer to it in the text using `[text](tag)`
+
+
+```md
+This was discussed in the [introduction](#intro)
+```
+
+---
+
+# `r rfa("markdown")` Tables
+
+The simplest way to make tables in markdown:
+
+- `|` seperates columns
+- `-` identify headers
+- `:` specifies text alignment
+
+.pull-left[
+
+```md
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| 12   | 100    | 1     |
+| 13   | 214    | 43    |
+| 14   | 234    | 10    |
+```
+]
+
+.pull-right[
+| Left | Center | Right |
+| :--- | :----: | ----: |
+| 12   | 100    | 1     |
+| 13   | 214    | 43    |
+| 14   | 234    | 10    |
+]
+
+--
+
+<br/>
+.font90[For more options, you can create your tables directly using `r rfa("r-project")` and export them in a code chunk using the [`knitr::kable`](https://cran.r-project.org/package=knitr) function and [`kableExtra`](https://cran.r-project.org/package=kableExtra) package.
+
+See this [website](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) for more.]
+
+
+---
+class: inverse, center, middle
+
+#  Code chunks
+
+<html><div style='float:left'></div><hr color='#ffdd55'style="margin-top: -60px;" size=1px width=720px></html>
+
+## The `r rfa("r-project")`  part
+
+---
+
+# Chunks
+
+```{r include=FALSE}
+knitr::opts_chunk$set(eval=FALSE)
+```
+
+
+
+````md
+This text is written in markdown
+
+```{r}`r ''`
+library(tibble)
+data(iris)
+head(iris)
+```
+````
+
+- `r rfa("exclamation-triangle")` `r` between brackets `{}`, why is that?
+- Where is the `r rfa("r-project")` code and the `r rfa("markdown")` section?
+
+
+
+---
+
+# Chunks
+
+### Code
+
+```{r}
+library(tibble)
+data(iris)
+head(iris)
+```
+
+### Print output
+
+```{r echo = FALSE, eval = TRUE}
+library(tibble)
+data(iris)
+head(iris)
+```
+
+
+---
+
+# Chunks
+.pull-left[
+
+### Code
+
+```{r}
+library(ggplot2)
+data(iris)
+ggplot(
+      data=iris,
+      aes(x = Sepal.Length,
+          y = Sepal.Width)
+  ) +
+geom_point(
+  aes(color=Species, shape=Species)
+) +
+xlab("Sepal Length") +
+ylab("Sepal Width") +
+ggtitle("Sepal Length-Width")
+```
+]
+
+.pull-right[
+### Graphic output
+
+```{r echo = FALSE, eval = TRUE, dpi=300, fig.height=5, fig.width=5}
+library(ggplot2)
+data(iris)
+ggplot(
+      data=iris,
+      aes(x = Sepal.Length,
+          y = Sepal.Width)
+  ) +
+  geom_point(aes(color=Species, shape=Species)) +
+  xlab("Sepal Length") +  ylab("Sepal Width") +
+  ggtitle("Sepal Length-Width")
+```
+]
+
+---
+
+# Chunks
+
+.pull-left[
+### Code
+
+```{r}
+library(leaflet)
+leaflet(height=400, width=400) %>%
+  addTiles() %>%
+  addMarkers(lng=174.768, lat=-36.852,
+             popup="The birthplace of R")
+```
+]
+
+.pull-right[
+<h3 style="margin-bottom:10px;">Map</h3>
+
+```{r echo = FALSE, eval = TRUE, dpi=300}
+library(leaflet)
+leaflet(height=400, width=400) %>%
+  addTiles() %>%
+  addMarkers(lng=174.768, lat=-36.852,
+             popup="The birthplace of R")
+```
+]
+
+
+---
+
+# Chunks
+
+.pull-left[
+### Code
+
+```{r}
+library(rbokeh)
+p <- figure() %>%
+  ly_points(Sepal.Length, Sepal.Width,
+    data = iris,
+    color = Species, glyph = Species,
+    hover = list(Sepal.Length, Sepal.Width))
+p
+```
+]
+
+.pull-right[
+<h3 style="margin-bottom:10px;">Map</h3>
+
+```{r echo = FALSE, eval = TRUE, warning=FALSE, dpi = 300}
+library(rbokeh)
+p <- figure(width = 400, height = 400)  %>%
+  ly_points(Sepal.Length, Sepal.Width, data = iris,
+    color = Species, glyph = Species,
+    hover = list(Sepal.Length, Sepal.Width))
+p
+```
+]
+
+```{r include=FALSE, eval = TRUE}
+knitr::opts_chunk$set(eval=TRUE)
+```
+
+---
+
+# Inline chunks
+
+### `r rfa("code")` Syntax
+
+We studied `` `r
+length(levels(iris$Species))` `` iris species and took
+measurements on `` `r
+nrow(iris)` `` flowers.
+
+We found that Iris virginica had the longest sepal with a mean of
+`` `r
+mean(subset(iris,Species=="virginica")$Sepal.Length)`
+`` millimeters!
+
+### `r rfa("file-alt")` Output
+
+````md
+This text is written in markdown.
+
+We studied `r length(levels(iris$Species))` iris species and took measurements on `r nrow(iris)` flowers.
+
+We found that Iris virginica had the longest sepal with a mean of `r mean(iris$Sepal.Length[iris$Species=="virginica"])` millimeters!
+````
+
+
+
+---
+class: inverse, center, middle
+
+# `r rfa("rocket")` Chunks options
+
+<html><div style='float:left'></div><hr color='#ffdd55' style="margin-top: -60px;" size=1px width=720px></html>
+
+---
+
+# Chunks options
+
+
+.pull-left[
+- Place between curly braces
+  `{r option=value}`
+
+- Multiple options separated by commas
+  `{r option1=value, option2=value}`
+
+- Label your code chunk!
+<img height="160px" width="160px" src="https://d33wubrfki0l68.cloudfront.net/6fcddff214345601f998805adce94ab0e21d8615/2a098/screenshots/rmarkdown-chunk-nav.png"></img>
+
+]
+
+
+.pull-right[
+
+````md
+```{r dispIris, option1=value, option2=value}`r ''`
+library(tibble)
+data(iris)
+head(iris)
+```
+````
+]
+
+
+---
+
+# Chunk options
+
+Chunk output can be customised with [numerous options](https://yihui.name/knitr/options/):
+
+```{r}
+str(knitr::opts_chunk$get())
+```
+
+---
+
+# Default options
+
+.pull-left[
+
+### `r rfa("code")` Syntax
+
+````md
+```{r}`r ''`
+head(iris)
+```
+````
+
+]
+
+.pull-right[
+
+### `r rfa("file-alt")` Output
+
+```{r}
+head(iris)
+```
+
+]
+
+---
+
+# Chunk option `echo`
+
+.pull-left[
+
+### `r rfa("code")` Syntax
+
+````md
+```{r echo = FALSE}`r ''`
+head(iris)
+```
+````
+
+]
+
+.pull-right[
+
+### `r rfa("file-alt")` Output
+
+```{r echo = FALSE}
+head(iris)
+```
+]
+
+
+- Display results but not code.
+- Useful to present results to people not interested by the code.
+- Use `echo = -1` to hide only the first line of a code chunk.
+
+---
+
+# Chunk option `eval`
+
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r eval = FALSE}`r ''`
+head(iris)
+```
+````
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r eval = FALSE}
+head(iris)
+```
+]
+
+- Code is not evaluated.
+- Useful to show exemple code.
+- Use `eval = -1` to evaluate every line of a code chunk except the first.
+
+
+---
+
+# Chunk option `include`
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r include = FALSE}`r ''`
+head(iris)
+```
+````
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r include = FALSE}
+head(iris)
+```
+]
+
+- Code is evaluated but no output (code, results and figures) is displayed.
+- Useful in setup options and package installation.
+
+---
+
+# Chunk option `results`
+
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r results = "hold"}`r ''`
+1 + 1
+2 + 2
+```
+````
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r results = "hold"}
+1 + 1
+2 + 2
+```
+]
+
+- Hold all results in a code chunk and display them at the end.
+
+---
+
+# Chunk option `results`
+
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r results = "hide"}`r ''`
+1 + 1
+ggplot(data = iris,
+       aes(x = Petal.Length,
+           y = Petal.Width)) +
+  geom_point()
+```
+````
+
+- Hide results but not plots
+
+]
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r results = "hide", fig.height=3.5, fig.width=4, fig.retina=3, fig.align='center'}
+1 + 1
+ggplot(data = iris,
+       aes(x = Petal.Length,
+           y = Petal.Width)) +
+  geom_point()
+```
+]
+
+---
+
+
+# Chunk options `fig.height` & `fig.width`
+.pull-left[
+### `r rfa("code")` Syntax
+````md
+```{r fig.height = 3,
+      fig.width = 5,
+      echo = FALSE}`r ''`
+ggplot(data = iris,
+       aes( x = Sepal.Length,
+            y = Sepal.Width,
+            color = Species)) +
+  geom_point()
+```
+````
+]
+
+
+.pull-right[
+### `r rfa("file-alt")` Output
+```{r fig.height = 3,fig.width = 5,echo = FALSE,dpi = 300}
+ggplot(data = iris,
+       aes(x = Sepal.Length,
+           y = Sepal.Width,
+           color = Species)) +
+  geom_point()
+```
+]
+
+- width and height of the plot in inches
+- Note that options are separated by commas
+
+---
+# Chunk options
+
+### What output each option suppresses?
+
+Option             | Run code | Show code | Output | Plots | Messages | Warnings
+-------------------|:--------:|:---------:|:------:|:-----:|:--------:|:-------:
+`eval = FALSE`     |`r rfa("times")`|         |`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`
+`include = FALSE`  | |`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`|`r rfa("times")`
+`echo = FALSE`     |  |`r rfa("times")`|     |    |      |
+`results = "hide"` |        |        |`r rfa("times")`|     |        |
+`fig.show = "hide"`|        |       |     | `r rfa("times")`|      |
+`message = FALSE`  |          |           |        |       |`r rfa("times")`|
+`warning = FALSE`  |          |           |        |       |          |`r rfa("times")`
+
+Table from [R for Data Science](https://r4ds.had.co.nz/r-markdown.html#chunk-options)
+
+---
+# Global chunk options
+
+## Setup
+
+You can change the default chunk options for all following chunks in your document.
+
+````md
+```{r include = FALSE}`r ''`
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  cache = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.align = "center"
+)
+```
+````
+
+---
 
 
 <!-- rmarkdown::render('index_DB.Rmd') -->
+
+<!-- : Docs :
+- https://kevcaz.github.io/Rmarkdowndocfr/
+- https://github.com/KevCaz/Rmarkdowndocfr
+- https://frbcesab.github.io/datatoolbox/exercises/rmarkdown/index.html#1
+- https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf
+- https://github.com/inSileco/ResearchDown/blob/master/index.Rmd
+- https://frbcesab.github.io/datatoolbox/courses/rmarkdown/index.html#17
+- https://insileco.github.io/ResearchDown/#19
+- https://nicolascasajus.fr/mastering-markdown/#67
+
+ -->
