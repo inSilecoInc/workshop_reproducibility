@@ -91,12 +91,15 @@ class: inverse, center, middle
 
 # Basic anatomy
 
-## R Markdown file `.Rmd`
+## R Markdown file
 
 .pull-left[
-- Metadata / front matter (**YAML**)
-- Text / document content (`r rfa("markdown")`)
-- Code chunks (`r rfa("r-project")`)
+- A `r rfa("markdown")` file written with (`r rfa("r-project")`) has the extension `.Rmd` (capital optional)
+
+- Structured in three parts:
+  - .font80[**YAML**]: Metadata / front matter
+  - `r rfa("markdown")`: Text / document content
+  - `r rfa("r-project")`: Code chunks .font70[(optional)]
 ]
 
 .pull-right[
@@ -1298,6 +1301,219 @@ output:
 ```
 ]
 
+
+---
+
+class: inverse, center, middle
+
+# Bibliography and citations
+
+![:custom_hr]()
+
+<img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="120px"></img>
+
+---
+
+# Bibliography
+
+## Bibliographic files
+
+- Bibliographies are typically included to a `.Rmd` document using an external bibliographic file
+
+--
+
+- *Pandoc* can use a wide variety of [bibliographic files](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#Specifying_a_Bibliography) to manage bibliographies and citations.
+
+--
+
+- For scientific writing, we recommend using a `mybiblio.bib` file in BiBTeX format, which you can export from your favorite reference manager software (*e.g.* [Zotero](https://www.zotero.org/), [`r rfa("mendeley")` Mendeley](https://www.mendeley.com/), [EndNote](https://endnote.com/))
+
+--
+
+- Note that bibliographic metadata can be included in the [YAML header](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html#Inline_References). We however do not recommend using this strategy, unless you wish to cite few references.
+
+
+---
+
+# Bibliography
+
+## `.bib` file
+
+```md
+@article{galbraith2012,
+  author = {Galbraith, Peter S. and Larouche, Pierre and Chass{\'e}, Jo{\"e}l and Petrie, Brian},
+  title = {Sea-Surface Temperature in Relation to Air Temperature in the {{Gulf}} of {{St}}. {{Lawrence}}: {{Interdecadal}} Variability and Long Term Trends},
+  journal = {Deep Sea Research Part II: Topical Studies in Oceanography},
+  volume = {77-80},
+  pages = {10--20},
+  year = {2012},
+  doi = {10.1016/j.dsr2.2012.04.001},
+  series = {Satellite {{Oceanography}} and {{Climate Change}}}
+}
+```
+
+- Use the citation key `galbraith2012` for in-text citations (more on this later)
+
+---
+
+# Bibliography
+
+## Include to `.Rmd`
+
+- Include a bibliography to a `.Rmd` in the .font60[**YAML**] header using the `bibliography` option
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output: pdf_document
+bibliography: mybiblio.bib
+---
+```
+
+.font90[
+`r rfa("exclamation-triangle")` Be sure that the path to your `.bib` file is well identified.
+]
+
+
+
+---
+
+# Bibliography
+
+## Placement
+
+- A bibliography will be added at the end of the document by default. Use an appropriate header at the end and you are good to go.
+
+```md
+...that will revolutionize the way we think about science.
+
+# References
+```
+
+--
+
+- If you wish to include text after the bibliography, such as an appendix, your can use the `<div id="refs"></div>` HTML tag (see [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html) for more on this):
+
+```md
+...that will revolutionize the way we think about science.
+
+# References
+
+<div id="refs"></div>
+
+# Appendix
+```
+
+---
+
+# Bibliography
+
+## Citation syntax
+
+- Use citation key with `@` to refer to a reference: `@id`
+
+.pull-left[
+.font80[
+```md
+Cite in parentheses [@galbraith2012].
+```
+]
+]
+
+.pull-right[
+.font80[Cite in parentheses (Galbraith et al. 2012)]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+Cite in parentheses [@galbraith2012; @cazelles2018].
+```
+]
+]
+
+.pull-right[
+.font80[Cite in parentheses (Galbraith et al. 2012, Cazelles et al. 2018)]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+Cite in parentheses + text [see @galbraith2012 pp. 30].
+```
+]
+]
+
+.pull-right[
+.font80[Cite in parentheses + text (see Galbraith et al. 2012 pp. 30)]
+]
+
+--
+
+.pull-left[
+.font80[
+```md
+Cite @galbraith2012 in a sentence.
+```
+]
+]
+
+.pull-right[
+.font80[Cite Galbraith et al. (2012) in a sentence.]
+]
+
+
+
+---
+
+# Bibliography
+
+## Styling
+
+- By default, pandoc uses the Chicago author-date format
+- You can use another style by specifying CSL style files with the the `csl` option in the .font60[**YAML**] header.
+- CSL files contain bibliographic and citation formatting informations.
+- There are hundreds of styles available on [GitHub](https://github.com/citation-style-language/styles) and scientific journals often provide their own CSL file.
+
+```yaml
+---
+title: "My document title"
+date: "01-03-2021"
+author: Me, you, them
+output: pdf_document
+bibliography: mybiblio.bib
+csl: mystyle.csl
+---
+```
+
+.font90[
+`r rfa("exclamation-triangle")` Be sure that the path to your `.csl` file is well identified.
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 class: inverse, center, middle
@@ -1306,7 +1522,71 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## *aka* knitting 🧶
+## *a.k.a.* knitting 🧶
+
+---
+
+# Exporting
+
+## Output formats
+
+.pull-left[
+- `knitr` executes the code and converts `.Rmd` to `.md`
+- Pandoc renders the `.md` file to the output format you want.
+]
+
+.pull-right[
+<img src="img/Rmdformat.png" style="vertical-align: middle"></img>
+]
+
+
+---
+
+# Exporting
+
+## `rmarkdown::render()`
+
+- Use [`render()`](https://www.rdocumentation.org/packages/rmarkdown/versions/2.6/topics/render) from the [`rmarkdown`](https://cran.r-project.org/package=rmarkdown) package
+- Generates the desired output from the `.Rmd` file
+
+--
+
+Main arguments:
+
+```md
+input: name of file to render
+output_format: one or more output formats, as specified in the YAML header.
+               "all" exports all the specified formats (optional).
+output_file: name of output file (optional).
+```
+
+--
+
+Minimal example:
+
+```{r, eval = FALSE}
+rmarkdown::render(input = "myrmd.Rmd")
+```
+
+---
+
+# Exporting
+
+## `r rfa("book")` The `down` universe
+
+- [`bookdown`](https://bookdown.org/): Write a notebook
+- [`csasdown`](https://github.com/pbs-assess/csasdown): Write a CSAS document
+- [`thesisdown`](https://github.com/ismayc/thesisdown): Write a thesis
+- [`rticles`](https://github.com/rstudio/rticles): Write a scientific article
+- [`posterdown`](https://github.com/brentthorne/posterdown): Create a poster
+- [`xaringan`](https://github.com/yihui/xaringan): Create nice presentation
+- [`vitae`](https://github.com/mitchelloharawild/vitae): Build a CV
+- [`blogdown`](https://bookdown.org/yihui/blogdown/): Generate a blog
+- [`pkgdown`](https://pkgdown.r-lib.org/): Generate R package documentation
+
+
+
+
 
 ---
 
@@ -1318,12 +1598,6 @@ class: inverse, center, middle
 
 <img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="120px"></img>
 
----
-
-
-# Output formats
-
-# `render()`
 
 ---
 
@@ -1342,27 +1616,20 @@ class: inverse, center, middle
 
 ✔️ **Style your output**: use `knitr` chunk options
 
+✔️ **Add a bibliography**: use `@id`, `mybiblio.bib`, `mystyle.csl`
+
 ✔️ **Export your document**: use `rmarkdown::render()`
 
----
+✔️ **Enjoy a simplified life** .font50[most of the time]
 
-
-# `r rfa("book")` The `down` universe
-
-- Write a notebook: [`bookdown`](https://bookdown.org/)
-- Write a CSAS document: [`csasdown`](https://github.com/pbs-assess/csasdown)
-- Write a thesis: [`thesisdown`](https://github.com/ismayc/thesisdown)
-- Write a scientific article [`rticles`](https://github.com/rstudio/rticles)
-- Create a poster: [`posterdown`](https://github.com/brentthorne/posterdown)
-- Create nice presentation: [`xaringan`](https://github.com/yihui/xaringan)
-- Build a CV: [`vitae`](https://github.com/mitchelloharawild/vitae)
-- Generate a blog: [`blogdown`](https://bookdown.org/yihui/blogdown/)
-- Generate R package documentation: [`pkgdown`](https://pkgdown.r-lib.org/)
 
 
 <!-- rmarkdown::render('index_DB.Rmd') -->
 
 <!-- : Docs :
+
+- Instruction exercices, j'aime l'idée: https://nicolascasajus.fr/mastering-markdown/instructions_ex3.pdf
+
 - https://kevcaz.github.io/Rmarkdowndocfr/
 - https://github.com/KevCaz/Rmarkdowndocfr
 - https://frbcesab.github.io/datatoolbox/exercises/rmarkdown/index.html#1
