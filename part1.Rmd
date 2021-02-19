@@ -270,59 +270,179 @@ kig("img/knowledge2.png")
 only retrieve data!!not carry out experiment 
 getting more complex in terms of computataional steps.
 
----
-
-Pioneer work in the 90's and Pioneer work of [Jon Claerbout](https://en.wikipedia.org/wiki/Jon_Claerbout) that leads to [Redoc](https://ieeexplore.ieee.org/document/881708).
-
-
-
 
 ---
-# Why does it matter ?
+# How do we produce knowledge?
 
-Strengthen science fondation 
-
-<!-- INSERT FIGURE -->
-
---- 
-# Openness and Reproducibility 
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/knowledge4.png")
+```
 
 
 ---
-# A technical challenge 
+# How do we produce knowledge?
 
-<!-- with definition retained we focus on 1 aspect that is technical -->
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/workflow1.png")
+```
 
-<!-- a gold standard but seveal intermediaire step -->
-
-<!-- toward gold standard could mean a lot of techno and a lotr of time -->
-
-<!-- INSERT citation about time -->
 
 
 ---
-# Is R suitable for Reproducible
+# How do we produce knowledge?
 
-YES 
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/workflow2.png")
+```
 
-Ropensci
+
 
 ---
+# Why does reproducibility matter?
 
-class: inverse, center, middle
 
-# `r rfa("info-circle")` Reproducible workflows with R
+## Analyzing data has become increasingly complex 
 
-![:custom_hr]()
+<br>
 
-## Why (`r icon::fontawesome("clock")` ~ 15min)
+--
 
+## with more and more `r rfa("laptop-code")` steps 
+
+<br>
+
+--
+
+## each step has a certain risk of error.
+
+Recognized in the 80's/90's by [Jon Claerbout](https://en.wikipedia.org/wiki/Jon_Claerbout) and this led to [Redoc](https://ieeexplore.ieee.org/document/881708).
+
+
+---
+# Why does reproducibility matter?
+
+
+## "Publish or perish" system urges scientists to work (too) fast
+
+<br>
+
+--
+
+## and to adopt "questionable research practices" 
+  - p-value hacking, 
+  - cherry picking,
+  - Hypothesizing After Results are Known (HARKing).
+
+`r rfa("file")` Fraser et al. (2018). [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
 
 ???
 
-Mostly tips and structure of the R
+also covid money or ego
 
---- 
+
+---
+# Why does reproducibility matter?
+
+
+```{R, echo = FALSE, out.width = "65%"}
+kig("img/replic_osf.png")
+```
+
+`r rfa("file")` Open Science Collaboration (2015). [Estimating the reproducibility of psychological science.](https://science.sciencemag.org/content/349/6251/aac4716)
+
+
+---
+# Why does reproducibility matter?
+
+
+```{R, echo = FALSE, out.width = "65%"}
+kig("img/retractation_index.png")
+```
+
+`r rfa("file")` Fang & Casadevall. (2011) [Retracted Science and the Retraction Index.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
+
+
+
+---
+# Why does reproducibility matter?
+
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/workflow3.png")
+```
+
+
+---
+# Why does reproducibility matter?
+
+<br>
+
+### **Can do**: make resaerch findings more robusts
+
+<br>
+
+### **Require**: making data and code open
+
+- [Open Science Framework](https://osf.io/) 
+- [rOpenSci](https://ropensci.org/)
+- etc.
+
+
+
+---
+# How do reproduce studies
+
+### **Collateral benefits**
+
+- re-usage of code can lead to an increase of efficiency;
+- improved coding skills;
+
+--
+
+### **Cons**
+
+- takes **a lot** of time.
+
+> It is also important to recognize that **there are costs and barriers to shifting to a practice
+of reproducible research**, particularly when the culture does not recognize the value of
+developing this new paradigm or the effort that can be required to develop or learn to use
+suitable tools. This is of particular concern to young people who need to earn tenure
+or secure a permanent position.
+
+
+
+.font80[`r rfa("file")` Stodden et al. (2013).
+[Setting the default to reproducible: Reproducibility in Computational and Experimental Mathematics](http://ethics.iit.edu/eelibrary/node/15429)]
+
+
+
+---
+# A reproducibility spectrum 
+
+```{R, echo = FALSE, out.width = "80%"}
+kig("img/spectrum.png")
+```
+
+.font80[`r rfa("file")` Peng. (2011).
+[Reproducible Research in Computational Science.](https://science.sciencemag.org/content/334/6060/1226)]
+
+--
+
+### Towards full reproducibility, technologies are increasingly complex
+
+- entire pipeline in code
+- record all version of software used in the workflow
+- code should not be impacted by OS or hardware
+
+
+---
+# Is R suitable for Reproducible?
+
+### YES YES and YES! 
+
+### Ropensci
+
+
+---
 # You are almost there 
 
 - input data in one place and never modify them afterwards
@@ -424,14 +544,9 @@ countdown::countdown(minutes = 15, seconds = 0)
 # Quote
 
 
-> we propose to ally the word reproducibility—currently the most widely used
-> single term in this domain—with descriptors for the underlying construct This
-> yields three terms: methods reproducibility, results reproducibility, and
-> inferential reproducibility. (Goodman, 2016)
- 
+
 > The fact that an analysis is reproducible does
-not guarantee the quality, correctness, or valid-
-ity of the published results. (Peng, 2011)
+not guarantee the quality, correctness, or validity of the published results. (Peng, 2011)
 
 
 > Unfortunately, the mere reproducibility of
@@ -444,10 +559,7 @@ of successful scientific research. (Leek and Peng 2015)
 [Roger D. Peng](https://github.com/rdpeng)
  
 
-preregistration
-https://retractionwatch.com/
-https://www.sciencemag.org/news/2018/10/what-massive-database-retracted-papers-reveals-about-science-publishing-s-death-penalty 
-https://lorenabarba.com/
+
 
 ---
 # Different R version different results
