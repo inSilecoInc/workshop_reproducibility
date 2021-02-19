@@ -8,9 +8,11 @@ Authors@R: c(
 Imports:
   countdown,
   icon,
+  emo,
   rmarkdown,
   xaringan
 Remotes: 
   mitchelloharawild/icon,
-  gadenbuie/countdown
+  gadenbuie/countdown,
+  hadley/emo
 

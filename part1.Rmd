@@ -27,6 +27,8 @@ knitr::opts_chunk$set(
   width = 120
 )
 rfa <- function(...) icon::fontawesome(...)
+emj <- function(...) emo::ji(...)
+kig <- function(...) knitr::include_graphics(...)
 ```
 
 
@@ -78,9 +80,11 @@ class: inverse, center, middle
 
 <br>
 
-### Understand the importance reproducible research and why R is powerful 
+### 1. Understand the importance of reproducible research and
 
-### Being able to create a simple R Markdown document including a reproducible analysis 
+### 2. Understand how R can be useful to that end
+
+### 3. Being able to create a simple R Markdown document including a reproducible analysis 
 
 
 
@@ -88,11 +92,11 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# `r rfa("info-circle")` Reproducibility you said?
+# `r rfa("info-circle")` Reproducible research
 
 ![:custom_hr]()
 
-## Why (`r icon::fontawesome("clock")` ~ 15min)
+## `r icon::fontawesome("clock")` ~ 30min
 
 
 ???
@@ -101,14 +105,19 @@ Comments
 
 
 ---
-# Reproducibility you said?
+# Reproducible research `r emj("hand")`
 
+<br>
 
 ## Reproducibility
+
+<br>
 
 --
 
 ## Reproducibility vs. Replicability
+
+<br>
 
 --
 
@@ -116,27 +125,156 @@ Comments
 
 
 ---
-# Reproducibility you said?
+# Terminology is not clear yet...
+
+- Various terms with different meanings
+
+```{R, echo = FALSE, out.width = "50%"}
+kig("img/r_words.png")
+```
+
+`r rfa("link")` Goble (2016), [What is Reproducibility?](https://www.slideshare.net/carolegoble/what-is-reproducibility-gobleclean)
 
 
-## Since 19990 and pioneer work of XXX 
+---
+# Terminology is not clear yet...
 
-## Terminology is not clear yet
-  - [](https://arxiv.org/abs/1802.03311)
-  - [R words]()
+## Reproducible vs. Replicable
 
-## But it's getting  
+### **no distinction** (A)
+  
+--
+  
+### **distinction** :
+- for some (B1):
+  - *reproducible*: authors provide data + computer code to re-create the results.
+  - *replicable*: new study same scientific findings as another study, collecting new
+  data and new analyses.
+- for others (B2): opposite definitions
 
---- 
-# Reproducibility you said?
+`r rfa("file")` Barba (2018), [Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
 
-<!-- INSERT SCHEME -->
+???
+
+similar methods but could be different
 
 
---- 
-# Reproducibility you said?
+---
+# Terminology is not clear yet...
 
-<!-- INSERT DEFINITIONS of 2019 report -->
+## Reproducible vs. Replicable
+
+
+```{R, echo = FALSE, out.width = "80%"}
+kig("img/terminos.png")
+```
+
+`r rfa("file")` Barba (2018), [Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
+
+
+---
+# Terminology is being clarified
+
+
+```{R, echo = FALSE, out.width = "50%"}
+kig("img/cover_rrs.png")
+```
+
+`r rfa("file")` National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+
+
+---
+# Terminology is being clarified
+
+> We define **reproducibility** to mean **computational reproducibility**—­
+obtaining consistent computational results using the same **input data**, computational steps, methods, **code**, and conditions of analysis; 
+
+--
+
+> and **replicability** to mean obtaining **consistent results across studies aimed at answering the
+same scientific question**, each of which has obtained its own data. 
+
+--
+
+> In short, reproducibility involves the original data and code; replicability involves
+new data collection and similar methods used by previous studies. 
+
+`r rfa("file")` National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+
+
+---
+# Terminology is being clarified
+
+> A third concept, **generalizability**, refers to the **extent that results of a study apply** in other contexts or populations that differ from the original one.
+
+
+`r rfa("file")` National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+
+
+
+---
+# Reproducibility is tied to computer science
+
+<br>
+
+### **Scientific studies should be replicable (Material & Methods)**
+
+--
+
+<br>
+
+### **With the help of technologies scientific studies should now be reproducible (Research compendium)**
+
+
+???
+
+It's a topic about research but quickly due to its nature we are talking about technologies.
+
+
+---
+# How do we produce knowledge?
+
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/knowledge1.png")
+```
+
+---
+# How do we produce knowledge?
+
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/knowledge2.png")
+```
+
+---
+# How do we produce knowledge?
+
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/knowledge3.png")
+```
+
+`r rfa("file")` Goodman et al. (2016). [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12). 
+
+
+---
+# How do we produce knowledge?
+
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/knowledge2.png")
+```
+
+???
+
+only retrieve data!!not carry out experiment 
+getting more complex in terms of computataional steps.
+
+---
+
+Pioneer work in the 90's and Pioneer work of [Jon Claerbout](https://en.wikipedia.org/wiki/Jon_Claerbout) that leads to [Redoc](https://ieeexplore.ieee.org/document/881708).
+
+
 
 
 ---
