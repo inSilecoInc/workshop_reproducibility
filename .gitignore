@@ -1,7 +1,6 @@
 # Workshop-specific files
 
-index.html
-index_DB.html
+*.html
 index.pdf
 assets/
 index_files/

@@ -14,7 +14,7 @@
    id="svg8"
    inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
    sodipodi:docname="knowledge.svg"
-   inkscape:export-filename="/home/kevcaz/Projects/inSilecoInc/workshop_reproducibility/img/knowledge3.png"
+   inkscape:export-filename="/home/kevcaz/Projects/inSilecoInc/workshop_reproducibility/img/knowledge4.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -196,9 +196,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.040894"
-     inkscape:cx="264.06218"
-     inkscape:cy="226.01977"
+     inkscape:zoom="3.3928977"
+     inkscape:cx="143.8005"
+     inkscape:cy="222.68435"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -218,7 +218,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -431,24 +431,24 @@
     <ellipse
        style="fill:none;stroke:#ffb000;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="path963-1"
-       cx="43.286518"
-       cy="39.709091"
+       cx="117.73811"
+       cy="37.576065"
        rx="4.552567"
        ry="7.2559571" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.45833px;line-height:0;font-family:sans-serif;fill:#e66100;fill-opacity:1;stroke:none;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
-       x="61.527756"
-       y="53.540524"
+       x="135.97934"
+       y="51.407497"
        id="text883-9-2"><tspan
          sodipodi:role="line"
-         x="61.527756"
-         y="53.540524"
+         x="135.97934"
+         y="51.407497"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#e66100;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan1432">Results</tspan><tspan
          sodipodi:role="line"
-         x="61.527756"
-         y="56.715523"
+         x="135.97934"
+         y="54.582497"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#e66100;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan1436">reproducibility</tspan></text>
     <text
@@ -461,7 +461,7 @@
          id="tspan1271"
          x="56.130669"
          y="71.04248"
-         style="stroke-width:0.264583"></tspan></text>
+         style="stroke-width:0.264583" /></text>
     <ellipse
        style="fill:none;stroke:#e66100;stroke-width:0.6;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="path963-1-9"
@@ -501,48 +501,68 @@
     <ellipse
        style="fill:none;stroke:#e66100;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="path963-1-1"
-       cx="43.286518"
-       cy="54.264511"
+       cx="117.73811"
+       cy="52.131485"
        rx="4.552567"
        ry="7.2559571" />
     <ellipse
        style="fill:none;stroke:#5d3a9b;stroke-width:0.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
        id="path963-1-96"
-       cx="43.286518"
-       cy="68.903885"
+       cx="117.73811"
+       cy="66.770859"
        rx="4.552567"
        ry="7.2559571" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.45833px;line-height:0;font-family:sans-serif;fill:#ffb000;fill-opacity:1;stroke:none;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
-       x="61.527756"
-       y="38.985104"
+       x="135.97934"
+       y="36.852077"
        id="text883-9-2-2"><tspan
          sodipodi:role="line"
-         x="61.527756"
-         y="38.985104"
+         x="135.97934"
+         y="36.852077"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffb000;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan1432-0">Methods</tspan><tspan
          sodipodi:role="line"
-         x="61.527756"
-         y="42.160103"
+         x="135.97934"
+         y="40.027077"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffb000;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan1436-7">reproducibility</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:6.45833px;line-height:0;font-family:sans-serif;fill:#5d3a9b;fill-opacity:1;stroke:none;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
-       x="61.527756"
-       y="68.179901"
+       x="135.97934"
+       y="66.046875"
        id="text883-9-2-3"><tspan
          sodipodi:role="line"
-         x="61.527756"
-         y="68.179901"
+         x="135.97934"
+         y="66.046875"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#5d3a9b;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan1432-1"> inferential</tspan><tspan
          sodipodi:role="line"
-         x="61.527756"
-         y="71.354904"
+         x="135.97934"
+         y="69.221878"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;line-height:1;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#5d3a9b;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
          id="tspan1436-1">reproducibility</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#5d3a9b;stroke-width:0.6;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+       id="ellipse1481"
+       cx="43.171459"
+       cy="63.131653"
+       rx="5.4666238"
+       ry="15.948766"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.45833px;line-height:1.25;font-family:sans-serif;fill:#5d3a9b;fill-opacity:1;stroke:none;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none"
+       x="3.4962077"
+       y="62.711494"
+       id="text1485"><tspan
+         sodipodi:role="line"
+         id="tspan1483"
+         x="3.4962077"
+         y="62.711494"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.87502px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5d3a9b;fill-opacity:1;stroke-width:0.161;stroke-miterlimit:4;stroke-dasharray:none">Reproducibility</tspan></text>
   </g>
 </svg>
