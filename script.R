@@ -12,6 +12,8 @@ knitr::opts_chunk$set(
   width = 120
 )
 rfa <- function(...) icon::fontawesome(...)
+emj <- function(...) emo::ji(...)
+kig <- function(...) knitr::include_graphics(...)
 
 
 ## ----plot1--------------------------------------------------------------------

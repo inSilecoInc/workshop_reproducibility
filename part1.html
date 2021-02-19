@@ -20,7 +20,6 @@
 
 
 
-
 class: title-slide, middle
 
 
@@ -69,9 +68,11 @@ class: inverse, center, middle
 
 &lt;br&gt;
 
-### Understand the importance of reproducibility and why R is powerful 
+### 1. Understand the importance of reproducible research and
 
-### Being able to create a simple R Markdown document including a reproducible analysis 
+### 2. Understand how R can be useful to that end
+
+### 3. Being able to create a simple R Markdown document including a reproducible analysis 
 
 
 
@@ -79,11 +80,11 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
-# &lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"&gt;&lt;/path&gt;&lt;/svg&gt; Rationalize
+# &lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"&gt;&lt;/path&gt;&lt;/svg&gt; Reproducible research
 
 ![:custom_hr]()
 
-## Why (&lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"&gt;&lt;/path&gt;&lt;/svg&gt; ~ 15min)
+## &lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"&gt;&lt;/path&gt;&lt;/svg&gt; ~ 30min
 
 
 ???
@@ -92,14 +93,255 @@ Comments
 
 
 ---
-# Plot
+# Reproducible research ✋
+
+&lt;br&gt;
+
+## Reproducibility
+
+&lt;br&gt;
+
+--
+
+## Reproducibility vs. Replicability
+
+&lt;br&gt;
+
+--
+
+## Reproducibility vs. Replicability vs. Generazability
 
 
-```r
-plot(1,1)
-```
+---
+# Terminology is not clear yet...
 
-&lt;img src="index_files/figure-html/plot1-1.png" style="display: block; margin: auto;" /&gt;
+- Various terms with different meanings
+
+&lt;img src="img/r_words.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt; Goble (2016), [What is Reproducibility?](https://www.slideshare.net/carolegoble/what-is-reproducibility-gobleclean)
+
+
+---
+# Terminology is not clear yet...
+
+## Reproducible vs. Replicable
+
+### **no distinction** (A)
+  
+--
+  
+### **distinction** :
+- for some (B1):
+  - *reproducible*: authors provide data + computer code to re-create the results.
+  - *replicable*: new study same scientific findings as another study, collecting new
+  data and new analyses.
+- for others (B2): opposite definitions
+
+&lt;svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; Barba (2018), [Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
+
+???
+
+similar methods but could be different
+
+
+---
+# Terminology is not clear yet...
+
+## Reproducible vs. Replicable
+
+
+&lt;img src="img/terminos.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+&lt;svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; Barba (2018), [Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
+
+
+---
+# Terminology is being clarified
+
+
+&lt;img src="img/cover_rrs.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+
+
+---
+# Terminology is being clarified
+
+&gt; We define **reproducibility** to mean **computational reproducibility**—­
+obtaining consistent computational results using the same **input data**, computational steps, methods, **code**, and conditions of analysis; 
+
+--
+
+&gt; and **replicability** to mean obtaining **consistent results across studies aimed at answering the
+same scientific question**, each of which has obtained its own data. 
+
+--
+
+&gt; In short, reproducibility involves the original data and code; replicability involves
+new data collection and similar methods used by previous studies. 
+
+&lt;svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+
+
+---
+# Terminology is being clarified
+
+&gt; A third concept, **generalizability**, refers to the **extent that results of a study apply** in other contexts or populations that differ from the original one.
+
+
+&lt;svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; National Academies of Sciences, Engineering, and Medicine
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+
+
+
+---
+# Reproducibility is tied to computer science
+
+&lt;br&gt;
+
+### **Scientific studies should be replicable (Material &amp; Methods)**
+
+--
+
+&lt;br&gt;
+
+### **With the help of technologies scientific studies should now be reproducible (Research compendium)**
+
+
+???
+
+It's a topic about research but quickly due to its nature we are talking about technologies.
+
+
+---
+# How do we produce knowledge?
+
+&lt;img src="img/knowledge1.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+# How do we produce knowledge?
+
+&lt;img src="img/knowledge2.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+# How do we produce knowledge?
+
+&lt;img src="img/knowledge3.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+&lt;svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48z"&gt;&lt;/path&gt;&lt;/svg&gt; Goodman et al. (2016). [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12). 
+
+
+---
+# How do we produce knowledge?
+
+&lt;img src="img/knowledge2.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+???
+
+only retrieve data!!not carry out experiment 
+getting more complex in terms of computataional steps.
+
+---
+
+Pioneer work in the 90's and Pioneer work of [Jon Claerbout](https://en.wikipedia.org/wiki/Jon_Claerbout) that leads to [Redoc](https://ieeexplore.ieee.org/document/881708).
+
+
+
+
+---
+# Why does it matter ?
+
+Strengthen science fondation 
+
+&lt;!-- INSERT FIGURE --&gt;
+
+--- 
+# Openness and Reproducibility 
+
+
+---
+# A technical challenge 
+
+&lt;!-- with definition retained we focus on 1 aspect that is technical --&gt;
+
+&lt;!-- a gold standard but seveal intermediaire step --&gt;
+
+&lt;!-- toward gold standard could mean a lot of techno and a lotr of time --&gt;
+
+&lt;!-- INSERT citation about time --&gt;
+
+
+---
+# Is R suitable for Reproducible
+
+YES 
+
+Ropensci
+
+---
+
+class: inverse, center, middle
+
+# &lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"&gt;&lt;/path&gt;&lt;/svg&gt; Reproducible workflows with R
+
+![:custom_hr]()
+
+## Why (&lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"&gt;&lt;/path&gt;&lt;/svg&gt; ~ 15min)
+
+
+???
+
+Mostly tips and structure of the R
+
+--- 
+# You are almost there 
+
+- input data in one place and never modify them afterwards
+
+- R scripts in one place 
+
+well... that's a very good beginning 
+
+
+---
+# Create a R folder 
+
+Create a meaningful set up 
+
+- R/
+- data/
+- doc/Rmd &lt;- articulated pipeline 
+
+---
+# Create a R folder 
+
+Ensure that all code work from root; ensure form starts 
+
+attached an sessionInfo()
+
+
+---
+# Create a R folder 
+
+Use version comtrol 
+Make your in a remote/virtual machine...
+
+towards the gold standard, technologies are increasingly more complex 
+
+
+---
+# IMHO 
+
+- make data avaialble 
+- attached local repo in appendix, a zip file
+- sessionInfo()
+
+This would be just wonderful.... this would be a huge stepo. 
+
+At the end I'll talk about breofly about a set of R packages and other techno/software that allow omne to ge further,. 
 
 
 ---
@@ -109,7 +351,7 @@ plot(1,1)
 
 
 ```{=html}
-&lt;div class="countdown" id="timer_603020f8" style="right:0;bottom:0;" data-warnwhen="0"&gt;
+&lt;div class="countdown" id="timer_60301e73" style="right:0;bottom:0;" data-warnwhen="0"&gt;
 &lt;code class="countdown-time"&gt;&lt;span class="countdown-digits minutes"&gt;15&lt;/span&gt;&lt;span class="countdown-digits colon"&gt;:&lt;/span&gt;&lt;span class="countdown-digits seconds"&gt;00&lt;/span&gt;&lt;/code&gt;
 &lt;/div&gt;
 ```
@@ -125,6 +367,8 @@ plot(1,1)
 - [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
 - [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
 - [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
+
+
 
 ---
 # Resources &lt;svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;fill:currentColor;position:relative;display:inline-block;top:.1em;"&gt;  [ comment ]  &lt;path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"&gt;&lt;/path&gt;&lt;/svg&gt;
@@ -162,6 +406,25 @@ plot(1,1)
 &gt; yields three terms: methods reproducibility, results reproducibility, and
 &gt; inferential reproducibility. (Goodman, 2016)
  
+&gt; The fact that an analysis is reproducible does
+not guarantee the quality, correctness, or valid-
+ity of the published results. (Peng, 2011)
+
+
+&gt; Unfortunately, the mere reproducibility of
+Reproducibility—the ability to recompute
+results—and replicability—the chances other
+experimenters will achieve a consistent
+result—are two foundational characteristics
+of successful scientific research. (Leek and Peng 2015)
+
+[Roger D. Peng](https://github.com/rdpeng)
+ 
+
+preregistration
+https://retractionwatch.com/
+https://www.sciencemag.org/news/2018/10/what-massive-database-retracted-papers-reveals-about-science-publishing-s-death-penalty 
+https://lorenabarba.com/
 
 ---
 # Different R version different results
