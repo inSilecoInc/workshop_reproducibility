@@ -59,29 +59,201 @@ class: title-slide, middle
 .instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
 
 
-
-
 ---
 
 class: inverse, center, middle
 
-# Introduction to R Markdown
+# Reproducible workflows
 
 ![:custom_hr]()
 
-<img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="120px"></img>
+## `r rfa("database")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("r-project")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("cogs")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("file")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("sync-alt")`
 
 ---
 
-# R Markdown <img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="50px"></img>
+# Building reproducible workflows
 
-## Markdown
+## Dynamic documents
+
+- Creating dynamic documents to automate workflows
+  - Code & text living together
+
+--
+
+## Markup language
+
+- Rendering text using tags to format document
+  - LaTex, HTML `r rfa("html5")`, Markdown `r rfa("markdown")`
+  - Forget word! `r rfa("ban")` `r rfa("file-word")` .font60[as much as allowed by collaborators]
+
+--
+
+## Computing language
+
+- Code for analyses and figures
+  - `r rfa("r-project")`, Python `r rfa("python")`, Julia, Matlab, C++, ...
+  - Forget excel! `r rfa("ban")` `r rfa("file-excel")` .font60[as much as humanly possible]
 
 ---
 
 class: inverse, center, middle
 
-# Basic anatomy
+# Markdown
+
+![:custom_hr]()
+
+## .font200[`r rfa("markdown")`]
+
+
+---
+
+# `r rfa("markdown")` Markdown
+
+## The genesis
+
+HTML markup is complex:
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Section header</h1>
+        <p>Paragraph</p>
+    </body>
+</html>
+```
+
+---
+
+# `r rfa("markdown")` Markdown
+
+## The genesis
+
+In comes markdown, a lightweight markup language:
+
+  > Markdown is a text-to-HTML conversion tool for web writers. Markdown allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+
+  > The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. .font90[[John Gruber, 2004](https://daringfireball.net/projects/markdown/)]
+
+---
+
+# `r rfa("markdown")` Markdown
+
+## The genesis
+
+.pull-left[
+From this:
+
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Section header</h1>
+        <p>Paragraphe</p>
+    </body>
+</html>
+```
+]
+
+
+.pull-left[
+To this:
+```md
+# Section header
+
+Paragraph
+```
+]
+
+---
+
+# `r rfa("markdown")` Markdown
+
+## Variants
+
+- Original developers (John Gruber and Aaron Swartz) did not continue developing Markdown after its release in 2004
+
+--
+
+- Avid enthusiasts took care of that. The results: many variants.
+  - [GitHub Flavored Markdown (GFM)](https://docs.github.com/en/github/writing-on-github)
+  - [Kramdown](https://kramdown.gettalong.org/)
+  - [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)
+  - [Multi Markdow](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#math-support)
+  - [Pandoc's Markdown](https://pandoc.org/MANUAL.html)
+
+--
+
+- [CommonMark](https://commonmark.org/) is addressing standardizing issues with Markdown.
+
+---
+
+# `r rfa("markdown")` Markdown
+
+## Pandoc's Markdown
+
+**Why?**
+
+  - `r rfa("r-project")` uses it through [R Markdown](https://rmarkdown.rstudio.com/lesson-8.html) .font60[much more on this later]
+
+--
+
+**What is Pandoc?**
+
+> a universal document converter
+
+> `r rfa("markdown")` `r rfa("arrow-right")` <i>LaTeX</i> `r rfa("arrow-right")` `r rfa("file-pdf")`
+<br/>
+> `r rfa("markdown")` `r rfa("arrow-right")` `r rfa("file-word")`
+<br/>
+> `r rfa("html5")` `r rfa("arrow-right")` `r rfa("markdown")`
+<br/>
+> **...**
+
+.fon80[See [Pandoc's website](https://pandoc.org/index.html) for a list of all possible conversions]
+
+
+
+---
+
+class: inverse, center, middle
+
+# .font200[`r rfa("r-project")`]
+
+![:custom_hr]()
+
+<img src="img/knitr.png" style="vertical-align: middle;margin:10px" width="120px"></img>
+<img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="120px"></img>
+
+
+---
+
+# <img src="img/knitr.png" style="vertical-align: middle;margin:10px" width="50px"></img> knitr
+
+[`knitr`](https://cran.r-project.org/package=knitr) .font90[01/2012 (0.1) &nbsp; // &nbsp; 01/2021 (1.3.1)]
+
+> Elegant, flexible, and fast dynamic report generation with R .font80[([Yihui Xie, creator](https://yihui.org/knitr/))]
+
+--
+
+- `knitr` executes code embedded in a dynamic document and "knits" it back into the document.
+
+---
+
+# <img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="50px"></img> R Markdown
+
+[`rmarkdown`](https://cran.r-project.org/package=rmarkdown) .font90[09/2014 (0.3.3) &nbsp; // &nbsp; 02/2021 (2.7)]
+
+> Convert R Markdown documents into a variety of formats.
+
+<center><img src="img/Rmdformat.png" style="vertical-align: middle"></img></center>
+
+
+---
+
+class: inverse, center, middle
+
+# <img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="50px"></img> Basic anatomy
 
 ![:custom_hr]()
 
@@ -89,7 +261,7 @@ class: inverse, center, middle
 
 ---
 
-# Basic anatomy
+# <img src="img/rmarkdown.png" style="vertical-align: middle;margin:10px" width="50px"></img> Basic anatomy
 
 ## R Markdown file
 
