@@ -8,6 +8,8 @@ index_DB_files/
 index_cache/
 script.R
 
+# MacOS
+.DS_Store
 
 # History files
 .Rhistory
