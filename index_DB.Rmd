@@ -1795,6 +1795,23 @@ class: inverse, center, middle
 ✔️ **Enjoy a simplified life** .font50[most of the time]
 
 
+---
+
+class: inverse, center, middle
+
+# Research compendium
+
+![:custom_hr]()
+
+## `r rfa("sitemap")`
+
+## `r rfa("database")` &nbsp; `r rfa("file-csv")` &nbsp; `r rfa("file-code")` &nbsp; `r rfa("cogs")` &nbsp; `r rfa("chart-bar")` &nbsp; `r rfa("table")` &nbsp; `r rfa("file-pdf")`
+
+
+---
+
+
+
 
 <!-- rmarkdown::render('index_DB.Rmd') -->
 
