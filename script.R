@@ -17,6 +17,69 @@ emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
 
 
+## ---- child = "part1.Rmd"-----------------------------------------------------
+
+## ---- echo = FALSE, out.width = "50%"-----------------------------------------
+kig("img/r_words.png")
+
+
+## ---- echo = FALSE, out.width = "80%"-----------------------------------------
+kig("img/terminos.png")
+
+
+## ---- echo = FALSE, out.width = "50%"-----------------------------------------
+kig("img/cover_rrs.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/knowledge1.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/knowledge2.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/knowledge3.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/knowledge2.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/knowledge4.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/workflow1.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/workflow2.png")
+
+
+## ---- echo = FALSE, out.width = "67%"-----------------------------------------
+kig("img/replic_osf.png")
+
+
+## ---- echo = FALSE, out.width = "90%"-----------------------------------------
+kig("img/replic_osf2.png")
+
+
+## ---- echo = FALSE, out.width = "65%"-----------------------------------------
+kig("img/retractation_index.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/workflow3.png")
+
+
+## ---- echo = FALSE, out.width = "80%"-----------------------------------------
+kig("img/spectrum.png")
+
+
+
 ## ---- child = "part2.Rmd"-----------------------------------------------------
 
 ## ---- eval = FALSE------------------------------------------------------------

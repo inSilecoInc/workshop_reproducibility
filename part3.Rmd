@@ -1,0 +1,94 @@
+---
+title: "About reproducibility"
+author: "inSileco Team"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
+---
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  dev = "png",
+  dpi = 108,
+  fig.width = 6,
+  fig.height = 4.5,
+  fig.align = 'center',
+  width = 120
+)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+rfa <- function(...) icon::fontawesome(...)
+emj <- function(...) emo::ji(...)
+kig <- function(...) knitr::include_graphics(...)
+```
+
+
+Package
+
+```
+.
+├── DESCRIPTION
+├── doc
+├── data
+├── inst
+├── LICENSE
+├── man
+├── NAMESPACE
+├── R
+├── README.md
+├── tests
+└── vignettes
+```
+
+
+--- 
+# Versioning 
+
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+
+https://git-scm.com/
+
+https://git-scm.com/book/en/v2
+
+Centralized Version Control Systems
+
+Distributed Version Control Systems
+
+---
+# Different R version different results
+
+
+```R
+# R 3.6
+df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
+plot(val ~ fact, data = df)   # works 
+# R 4.0
+df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
+plot(val ~ fact, data = df)   # does not work
+```
+
+
+- renv 
+
+https://rstudio.github.io/renv/articles/renv.html
+
+- targets 
+
+https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
+
+https://github.com/ropensci/targets
+
+https://github.com/wlandau/targets-minimal
+
+
+https://github.com/karthik/holepunch
