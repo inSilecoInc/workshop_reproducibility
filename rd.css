@@ -118,6 +118,8 @@ a:hover, a:active {
     color: #0a3152;
   }
   
+  /* .pull-right code }[] */
+  
   
   /* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
   .title-slide .remark-slide-number {
@@ -125,11 +127,11 @@ a:hover, a:active {
   }
 
   .title-slide {
-    background-image: url('img/raster_ex.png');
+    background-image: url('img/phdcomics.png');
     background-color: #0a3152;
     background-size: contain;
     border: 0px;
-    background-position: 580px 0;
+    background-position: 800px 0;
     line-height: 1;
     }
 
