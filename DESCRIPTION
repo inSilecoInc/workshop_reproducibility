@@ -9,9 +9,12 @@ Imports:
   countdown,
   icon,
   emo,
+  ggplot2,
+  leaflet,
   palmerpenguins,
-  rmarkdown,
   rbokeh,
+  rmarkdown,
+  tibble,
   xaringan,
 Remotes: 
   mitchelloharawild/icon,
