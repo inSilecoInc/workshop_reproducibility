@@ -1,67 +1,10 @@
 ---
-title: "About reproducibility"
-author: "inSileco Team"
-output:
-  xaringan::moon_reader:
-    css: [default, rd.css, rd-font.css, "hygge"]
-    lib_dir: assets
-    seal: false
-    nature:
-      highlightStyle: dracula
-      countIncrementalSlides: false
-      beforeInit: "macros.js"
----
-
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  comment = "#>",
-  collapse = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  dev = "png",
-  dpi = 108,
-  fig.width = 6,
-  fig.height = 4.5,
-  fig.align = 'center',
-  width = 120
-)
-rfa <- function(...) icon::fontawesome(...)
-```
-
-
-class: title-slide, middle
-
-
-## .font200[`r icon::fontawesome("r-project")`asters]
-
-<br>
-
-.instructors[
-  .font180[About reproducibility]
-  <br><br><br>
-  .authors140[David Beauchesne & Kevin Cazelles]
-  <br><br>
-  `r format(Sys.time(), '%B %d, %Y')`
-  <br>
-  .font200[
-  [`r rfa("github")`](https://github.com/inSilecoInc)
-  [`r rfa("database")`](link_to_data)
-  [`r rfa("file-pdf")`](link_to_pdf_version)
-  ]
-]
-
-<br>
-<img src="img/logoW.png" width="140px"></img>
-
-![deploy workshop](https://github.com/inSilecoInc/workshop_reproducibility/workflows/deploy%20workshop/badge.svg)
-
-.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
-
+title: part2
+--- 
 
 ---
-
 class: inverse, center, middle
+
 
 # Reproducible workflows
 
@@ -156,7 +99,7 @@ From this:
 ]
 
 
-.pull-left[
+.pull-right[
 To this:
 ```md
 # Section header

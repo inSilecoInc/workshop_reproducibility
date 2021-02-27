@@ -9,10 +9,13 @@ Imports:
   countdown,
   icon,
   emo,
+  palmerpenguins,
   rmarkdown,
-  xaringan
+  rbokeh,
+  xaringan,
 Remotes: 
   mitchelloharawild/icon,
   gadenbuie/countdown,
-  hadley/emo
+  hadley/emo,
+  allisonhorst/palmerpenguins
 
