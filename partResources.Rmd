@@ -29,11 +29,12 @@ kig("img/degree_repro.png")
 ### Reproducibility
 
 - [Barba-group reproducibility syllabus](https://medium.com/hackernoon/barba-group-reproducibility-syllabus-e3757ee635cf#.h603izuwo)
-- [*What does research reproducibility mean?*](https://stm.sciencemag.org/content/8/341/341ps12.full)
+- [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12.full)
 - [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
 - [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
 - [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
-
+- [Ten Simple Rules for Reproducible Computational
+Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)
 
 
 ---

@@ -7,6 +7,7 @@ index_files/
 index_DB_files/
 index_cache/
 script.R
+demo/min_workflow/
 
 # MacOS
 .DS_Store

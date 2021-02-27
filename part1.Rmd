@@ -1,39 +1,6 @@
 ---
-title: "About reproducibility"
-author: "inSileco Team"
-output:
-  xaringan::moon_reader:
-    css: [default, rd.css, rd-font.css, "hygge"]
-    lib_dir: assets
-    seal: false
-    nature:
-      highlightStyle: dracula
-      countIncrementalSlides: false
-      beforeInit: "macros.js"
+title: "part 1"
 ---
-
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  comment = "#>",
-  collapse = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  dev = "png",
-  dpi = 108,
-  fig.width = 6,
-  fig.height = 4.5,
-  fig.align = 'center',
-  width = 120
-)
-options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
-rfa <- function(...) icon::fontawesome(...)
-emj <- function(...) emo::ji(...)
-kig <- function(...) knitr::include_graphics(...)
-```
-
-
-
 
 
 ---
@@ -385,7 +352,6 @@ DB and I have developed coding skills for this.
 ---
 # How do reproduce studies
 
-
 ### .font140[Reproducibility will not solve all issues]
 
 > Unfortunately, the mere reproducibility of computational results is
@@ -394,9 +360,12 @@ DB and I have developed coding skills for this.
 > poor study design, missing data—that threaten the validity and useful
 > interpretation of the results.
 
-
 .font80[`r rfa("file")` Leek & Peng (2015).
 [Opinion: Reproducible research can still be wrong: Adopting a prevention approach](https://doi.org/10.1073/pnas.1421412111)]
+
+
+---
+# How do reproduce studies
 
 
 ### .font140[**Obstacle**: it takes **a lot** of time]
@@ -478,8 +447,9 @@ Questions??
 `r rfa("video")` Ignasi Bartomeus (2016) [a reproducible workflow](https://www.youtube.com/watch?v=s3JldKoA0zw).
 
 
-??? 
-Avoid re-doing every by hand! Instead set up your repository. 
+???
+
+Avoid re-doing every by hand! Instead, set up your repository. 
 
 
 
@@ -488,11 +458,16 @@ Avoid re-doing every by hand! Instead set up your repository.
 
 ### R is suitable for Reproducible
 
-- open source (no license issues)
+- open source (no license-related issues)
 
 --
 
-- strong community actively engaged in making science reproducible
+- strong community actively engaged in making science more reproducible
+
+--
+  
+- A large diversity of package for reproducibility purposes 
+  - to packages to improve the workflow
 
 --
 
@@ -505,75 +480,119 @@ community ==> made of R user
 and so are Python and Julia
 
 
---- 
-
-
-
 ---
-# Is ?
+# You might not be that far! 
 
-### YES YES and YES! 
+ 
+### One well-structured folder! [Download it](demo/min_workflow.zip).
 
-### Ropensci
+--
 
-
-
-
-- input data in one place and never modify them afterwards
-
-- R scripts in one place 
-
-well... that's a very good beginning 
-
-
----
-# Create a R folder 
-
-Create a meaningful set up 
-
-- R/
-- data/
-- doc/Rmd <- articulated pipeline 
-
----
-# Create a R folder 
-
-Ensure that all code work from root; ensure form starts 
-
-attached an sessionInfo()
-
-
----
-# Create a R folder 
-
-Use version comtrol 
-Make your in a remote/virtual machine...
-
-towards the gold standard, technologies are increasingly more complex 
-
-
----
-# IMHO 
-
-- make data avaialble 
-- attached local repo in appendix, a zip file
-- sessionInfo()
-
-This would be just wonderful.... this would be a huge stepo. 
-
-At the end I'll talk about breofly about a set of R packages and other techno/software that allow omne to ge further,. 
-
-
-
----
-# Different R version different results
-
-
-```R
-# R 3.6
-df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
-plot(val ~ fact, data = df)   # works 
-# R 4.0
-df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
-plot(val ~ fact, data = df)   # does not work
+```sh
+.
+├── data
+├── ms
+├── output
+├── R
+└── README.md
 ```
+
+<br>
+
+--
+
+`r rfa("blog")` Rich FitzJohn (2013). [Designing projects](https://nicercode.github.io/blog/2013-04-05-projects/)
+
+
+
+---
+# You might not be that far! 
+
+
+- `r emj("file_folder")` `R` : R code (`.R` files)
+  
+  - functions, scripts ... 
+  - data retrieval, statistical analysis, figure
+  
+<br>  
+
+--
+
+- `r emj("file_folder")` `data` : 
+
+  - input/raw data 
+  - processed data
+  - data may be archived on line (e.g. Dryad) and may be accessed via a script (see [rdryad](https://docs.ropensci.org/rdryad/))
+
+---
+# You might not be that far! 
+
+
+- `r emj("file_folder")` `output` (`fig` `tab`): 
+
+  - figures 
+  - tables 
+
+<br>  
+
+--
+
+- `r emj("file_folder")` `ms` (`doc`)
+
+  - main manuscript 
+  - Supplementary Information (SI)
+
+
+
+---
+# You might not be that far! 
+
+
+## Follow 3 simple rules! 
+
+
+### 1. The folder must be self contained
+  
+  - think of the root of the folder as the root of the system 
+  - nothing beyond locally 
+  - ~~C:\user/data\dat0001.txt~~
+  - but this system is not isolated (e.g. remote)
+  - does not mean everything will be shared
+  
+---
+# You might not be that far! 
+
+
+## Follow 3 simple rules! 
+  
+### 2. document massively
+
+  - your datasets (could be a link to relevant documentation)
+  - your functions and scripts 
+  - and the trick you've used that won't be clear to others (that future yourself) 
+
+---
+# You might not be that far! 
+
+
+## Follow 3 simple rules! 
+
+
+### 3. Keep track of all versions used
+
+  - R version 
+  - Package versions
+
+<br><br>
+
+.font80[`r rfa("file")` Sandve et al. [Ten Simple Rules for Reproducible Computational
+Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)]
+
+
+---
+# You might not be that far! `r emj("computer")`
+
+--
+
+## Zip it, add is as SI, 80% of the job is done !
+ 
