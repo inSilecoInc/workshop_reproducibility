@@ -1,0 +1,74 @@
+---
+title: "resources"
+---
+
+---
+class: inverse, center, middle
+
+# `r rfa("info-circle")` Resources
+
+![:custom_hr]()
+
+## `r icon::fontawesome("clock")` ~ 30min
+
+
+---
+# Resources `r rfa("link")`
+
+
+```{R, echo = FALSE, out.width = "70%"}
+kig("img/degree_repro.png")
+```
+
+.font80[`r rfa("github")` Casajus N., Dray S., Gimenez O., Guéry L., Guilhaumon F. & Schiettekatte N. M. D. (2020) Formation FRB CESAB / GDR ECOSTAT : Bonnes pratiques pour une recherche reproductible en écologie numérique (Version 2020). Zenodo. http://doi.org/10.5281/zenodo.4262978.]
+
+
+---
+# Resources `r rfa("link")`
+
+### Reproducibility
+
+- [Barba-group reproducibility syllabus](https://medium.com/hackernoon/barba-group-reproducibility-syllabus-e3757ee635cf#.h603izuwo)
+- [*What does research reproducibility mean?*](https://stm.sciencemag.org/content/8/341/341ps12.full)
+- [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
+- [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
+- [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
+
+
+
+---
+# Resources `r rfa("link")`
+
+### OSF
+
+- [COS: Strategic Plan, v2.0](https://docs.google.com/document/d/1sqz3appQ73vqa6fP1Gy8KK8HZpotoSGaiJC1XQuvREI/edit)
+- [50 cancer studies](https://www.sciencemag.org/news/2018/07/plan-replicate-50-high-impact-cancer-papers-shrinks-just-18)
+- [Reproducibility Project: Cancer Biology](https://elifesciences.org/collections/9b1e83d1/reproducibility-project-cancer-biology)
+
+
+---
+# Resources `r rfa("link")`
+
+### Research Compendium 
+
+- [rOpenSci](https://ropensci.org/)
+- [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
+- [Reproducible Analysis With R](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/)
+- [Touchdown your research with Rmarkdown](https://insileco.github.io/ResearchDown/#1)
+- [Formation FRB-Cesab & GDR EcoStat (fr)](https://frbcesab.github.io/datatoolbox/index.html#1)
+- [Research Compendium](https://research-compendium.science/) landing page
+- [rrrpkg](https://github.com/ropensci/rrrpkg)
+- [rrtools](https://github.com/benmarwick/rrtools)
+
+
+
+
+---
+# inSileco
+
+<!-- LAST SLIDE -->
+
+- inSileco https://insilecoinc.github.io/
+- David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
+- Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
+

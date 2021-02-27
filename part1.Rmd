@@ -386,6 +386,19 @@ DB and I have developed coding skills for this.
 # How do reproduce studies
 
 
+### .font140[Reproducibility will not solve all issues]
+
+> Unfortunately, the mere reproducibility of computational results is
+> insufficient to address the replication crisis because even a reproducible
+> analysis can suffer from many problems—confounding from omitted variables,
+> poor study design, missing data—that threaten the validity and useful
+> interpretation of the results.
+
+
+.font80[`r rfa("file")` Leek & Peng (2015).
+[Opinion: Reproducible research can still be wrong: Adopting a prevention approach](https://doi.org/10.1073/pnas.1421412111)]
+
+
 ### .font140[**Obstacle**: it takes **a lot** of time]
 
 > It is also important to recognize that there are costs and barriers to shifting to a practice
@@ -446,7 +459,7 @@ We are aiming at given you a sense of this!!
 
 class: inverse, center, middle
 
-# A minimal workflow with `r rfa("r-project")`
+# A minimal reproducible workflow with `r rfa("r-project")`
 
 ![:custom_hr]()
 
@@ -459,6 +472,14 @@ Questions??
 
 
 
+---
+# A reproducible workflow?
+
+`r rfa("video")` Ignasi Bartomeus (2016) [a reproducible workflow](https://www.youtube.com/watch?v=s3JldKoA0zw).
+
+
+??? 
+Avoid re-doing every by hand! Instead set up your repository. 
 
 
 
@@ -482,6 +503,11 @@ Questions??
 
 community ==> made of R user 
 and so are Python and Julia
+
+
+--- 
+
+
 
 ---
 # Is ?
@@ -538,76 +564,6 @@ This would be just wonderful.... this would be a huge stepo.
 At the end I'll talk about breofly about a set of R packages and other techno/software that allow omne to ge further,. 
 
 
----
-# Exercice 
-
-### Description
-
-```{r, echo = FALSE, purl = FALSE}
-countdown::countdown(minutes = 15, seconds = 0)
-```
-
-
----
-# Resources `r rfa("link")`
-
-### Reproducibility
-
-- [Barba-group reproducibility syllabus](https://medium.com/hackernoon/barba-group-reproducibility-syllabus-e3757ee635cf#.h603izuwo)
-- [*What does research reproducibility mean?*](https://stm.sciencemag.org/content/8/341/341ps12.full)
-- [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
-- [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
-- [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
-
-
-
----
-# Resources `r rfa("link")`
-
-### OSF
-
-- [COS: Strategic Plan, v2.0](https://docs.google.com/document/d/1sqz3appQ73vqa6fP1Gy8KK8HZpotoSGaiJC1XQuvREI/edit)
-- [50 cancer studies](https://www.sciencemag.org/news/2018/07/plan-replicate-50-high-impact-cancer-papers-shrinks-just-18)
-- [Reproducibility Project: Cancer Biology](https://elifesciences.org/collections/9b1e83d1/reproducibility-project-cancer-biology)
-
-
----
-# Resources `r rfa("link")`
-
-### Research Compendium 
-
-- [rOpenSci](https://ropensci.org/)
-- [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
-- [Reproducible Analysis With R](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/)
-- [Touchdown your research with Rmarkdown](https://insileco.github.io/ResearchDown/#1)
-- [Formation FRB-Cesab & GDR EcoStat (fr)](https://frbcesab.github.io/datatoolbox/index.html#1)
-- [Research Compendium](https://research-compendium.science/) landing page
-- [rrrpkg](https://github.com/ropensci/rrrpkg)
-- [rrtools](https://github.com/benmarwick/rrtools)
-
-
-
-
----
-# Quote
-
-
-
-> The fact that an analysis is reproducible does
-not guarantee the quality, correctness, or validity of the published results. (Peng, 2011)
-
-
-> Unfortunately, the mere reproducibility of
-Reproducibility—the ability to recompute
-results—and replicability—the chances other
-experimenters will achieve a consistent
-result—are two foundational characteristics
-of successful scientific research. (Leek and Peng 2015)
-
-[Roger D. Peng](https://github.com/rdpeng)
- 
-
-
 
 ---
 # Different R version different results
@@ -621,15 +577,3 @@ plot(val ~ fact, data = df)   # works
 df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
 plot(val ~ fact, data = df)   # does not work
 ```
-
-
-
----
-# inSileco
-
-<!-- LAST SLIDE -->
-
-- inSileco https://insilecoinc.github.io/
-- David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
-- Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
-
