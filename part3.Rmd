@@ -1,6 +1,5 @@
 ---
-title: "About reproducibility"
-author: "inSileco Team"
+title: "Part 3"
 output:
   xaringan::moon_reader:
     css: [default, rd.css, rd-font.css, "hygge"]
@@ -33,6 +32,196 @@ kig <- function(...) knitr::include_graphics(...)
 ```
 
 
+---
+
+class: inverse, center, middle
+
+# `r rfa("toolbox")` Towards the gold standard
+
+![:custom_hr]()
+
+## `r icon::fontawesome("clock")` ~ 30min
+
+
+???
+
+A word about setting up those tools depending on the environemnt.
+
+---
+# Gold standard 
+
+```{R, echo = FALSE, out.width = "80%"}
+kig("img/spectrum.png")
+```
+
+.font80[`r rfa("file")` Peng. (2011).
+[Reproducible Research in Computational Science.](https://science.sciencemag.org/content/334/6060/1226)]
+
+--
+
+### Towards full reproducibility, technologies are getting more complex
+
+
+- entire pipeline in a versioned repository
+
+
+- record all version of software used in the workflow
+
+
+- code run without being impacted by OS or hardware
+
+
+???
+
+A tool box of software 
+Coding a lot
+
+
+---
+# Version control `r emj("hand")`
+
+--
+
+## Keep track of code changes...
+
+- to talk about the same piece of code 
+
+--
+
+- to easy go back in time 
+
+--
+
+- to tag version of code 
+
+
+---
+# Version control with Git
+
+### Local versioning
+
+```{r, echo = FALSE, out.width = "50%"}
+kig("https://git-scm.com/book/en/v2/images/local.png")
+```
+
+`r rfa("book")` Chacon & Straub (2014) [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+---
+# Version control with Git
+
+### Centralized version control
+
+```{r, echo = FALSE, out.width = "50%"}
+kig("https://git-scm.com/book/en/v2/images/centralized.png")
+```
+
+`r rfa("book")` Chacon & Straub (2014) [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+
+---
+# Version control with Git
+
+### Distributed version control such as Git
+
+```{r, echo = FALSE, out.width = "42%"}
+kig("https://git-scm.com/book/en/v2/images/distributed.png")
+```
+
+`r rfa("book")` Chacon & Straub (2014) [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+
+---
+# Version control with Git `r emj("computer")`
+
+
+```sh 
+$ git init -b main 
+$ git add -A 
+$ git commit -m 'initial commit'
+# do changes 
+$ git add R/pipeline.R
+$ git commit -m 'inform user when pipeline() ends'
+# see history
+$ git log
+$ git checkout HEAD~1
+# git revert HEAD~1..HEAD if going back needed
+```
+
+
+
+---
+# Version control with Git + GitHub/Gitlab
+
+```{r, echo = FALSE, out.width = "42%"}
+kig("https://git-scm.com/book/en/v2/images/distributed.png")
+```
+
+### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility) repository for this workshop !
+
+???
+ 
+push and pull
+show repo
+
+
+
+---
+# Use a pipeline toolkit: [GNU Make](https://www.gnu.org/software/make/manual/make.html)
+
+--
+
+### 1. Create a file `makefile` (or `Makfile`)
+
+<br>
+
+
+### 2. Write down what it needs to do
+
+```sh
+ms: ms/ms.Rmd 
+	Rscript -e 'rmarkdown::render("ms/ms.Rmd")'
+```
+
+<br>
+
+### 3. Use `make` e.g. `make ms`
+
+
+---
+# Use a pipeline toolkit: [GNU Make](https://www.gnu.org/software/make/manual/make.html) `r emj("computer")`
+
+<br>
+
+--
+
+`r rfa("blog")` Sachin Patil (2018) [What is a Makefile and how does it work?](https://opensource.com/article/18/8/what-how-makefile)
+
+
+
+---
+# Use a pipeline toolkit: [targets](https://www.gnu.org/software/make/manual/make.html)
+
+
+```{r, echo = FALSE, out.width = "42%"}
+kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
+```
+
+`r rfa("book")` [The targets R Package User Manual](https://books.ropensci.org/targets/index.html#motivation)
+
+
+
+
+
+---
+# Make a R package !
+
+## Why?
+
+- check you code 
+
+
+---
+
 Package
 
 ```
@@ -51,21 +240,19 @@ Package
 ```
 
 
---- 
-# Versioning 
+---
+# Make a R package !
 
-https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
-
-https://git-scm.com/
-
-https://git-scm.com/book/en/v2
-
-Centralized Version Control Systems
-
-Distributed Version Control Systems
 
 ---
-# Different R version different results
+# Make a R package !
+
+
+
+---
+# Manage your dependencies 
+
+## Different R version different results
 
 
 ```R
@@ -77,18 +264,46 @@ df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
 plot(val ~ fact, data = df)   # does not work
 ```
 
+- Manage the depencies [`renv`](https://cran.r-project.org/web/packages/renv/)
+- https://rstudio.github.io/renv/articles/renv.html
 
-- renv 
 
-https://rstudio.github.io/renv/articles/renv.html
+---
+# use a CI 
 
-- targets 
+## Check your code on a freshly install machine 
 
-https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
+## GitHub action
 
-https://github.com/ropensci/targets
 
-https://github.com/wlandau/targets-minimal
+---
+# Dockerize 
 
+- [docker](https://www.docker.com/) 
+
+---
+# Archive 
+
+- reference [https://zenodo.org/](Zenodo)
+
+
+---
+# Holepunch
+
+- once set up om GH 
+
+
+# Make a R package 
+
+Getting the 
 
 https://github.com/karthik/holepunch
+
+
+
+
+
+https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
+https://github.com/ropensci/targets
+https://github.com/wlandau/targets-minimal
+
