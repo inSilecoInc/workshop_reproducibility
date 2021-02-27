@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
   fig.align = 'center',
   width = 120
 )
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
 rfa <- function(...) icon::fontawesome(...)
 emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
@@ -81,10 +82,11 @@ class: inverse, center, middle
 
 <br>
 
-### Understand the importance of reproducibility and why R is powerful 
+### 1. Understand the importance of reproducible research and
 
-### Being able to create a simple R Markdown document including a reproducible analysis 
+### 2. Understand how R can be useful to that end
 
+### 3. Being able to create a simple R Markdown document including a reproducible analysis 
 
 
 
@@ -147,7 +149,7 @@ plot(1,1)
 
 ### Description
 
-```{r, echo = FALSE, purl = FALSE}
+```{r, echo = FALSE, results = 'asis', purl = FALSE}
 countdown::countdown(minutes = 15, seconds = 0)
 ```
 

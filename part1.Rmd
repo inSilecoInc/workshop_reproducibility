@@ -26,65 +26,13 @@ knitr::opts_chunk$set(
   fig.align = 'center',
   width = 120
 )
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
 rfa <- function(...) icon::fontawesome(...)
 emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
 ```
 
 
-class: title-slide, middle
-
-
-## .font200[`r icon::fontawesome("r-project")`asters]
-
-<br>
-
-.instructors[
-  .font180[About reproducibility]
-  <br><br><br>
-  .authors140[David Beauchesne & Kevin Cazelles]
-  <br><br>
-  `r format(Sys.time(), '%B %d, %Y')`
-  <br>
-  .font200[
-  [`r rfa("github")`](https://github.com/inSilecoInc)
-  [`r rfa("database")`](link_to_data)
-  [`r rfa("file-pdf")`](link_to_pdf_version)
-  ]
-]
-
-<br>
-<img src="img/logoW.png" width="140px"></img>
-
-![deploy workshop](https://github.com/inSilecoInc/workshop_reproducibility/workflows/deploy%20workshop/badge.svg)
-
-.instructors[Content under [`r rfa("creative-commons")` `r rfa("creative-commons-by")`](https://creativecommons.org/licenses/by/4.0/) unless otherwise specified.]
-
-
-
-
----
-
-class: inverse, center, middle
-
-# Learning objectives
-
-![:custom_hr]()
-
-## .font160[`r rfa("map")`  + `r rfa("r-project")`]
-
-
----
-
-# Learning objectives
-
-<br>
-
-### 1. Understand the importance of reproducible research and
-
-### 2. Understand how R can be useful to that end
-
-### 3. Being able to create a simple R Markdown document including a reproducible analysis 
 
 
 
@@ -121,7 +69,7 @@ Comments
 
 --
 
-## Reproducibility vs. Replicability vs. Generazability
+## Reproducibility vs. Replicability vs. Generalizability
 
 
 ---
@@ -141,6 +89,10 @@ kig("img/r_words.png")
 
 ## Reproducible vs. Replicable
 
+`r rfa("file")` Barba (2018), [Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
+
+--
+
 ### **no distinction** (A)
   
 --
@@ -150,9 +102,9 @@ kig("img/r_words.png")
   - *reproducible*: authors provide data + computer code to re-create the results.
   - *replicable*: new study same scientific findings as another study, collecting new
   data and new analyses.
-- for others (B2): opposite definitions
+--
 
-`r rfa("file")` Barba (2018), [Terminologies for Reproducible Research](https://arxiv.org/abs/1802.03311)
+- for others (B2): opposite definitions
 
 ???
 
@@ -203,6 +155,11 @@ new data collection and similar methods used by previous studies.
 `r rfa("file")` National Academies of Sciences, Engineering, and Medicine
 (2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
 
+???
+
+1. good practices
+2. robustness of a finding science
+
 
 ---
 # Terminology is being clarified
@@ -213,6 +170,9 @@ new data collection and similar methods used by previous studies.
 `r rfa("file")` National Academies of Sciences, Engineering, and Medicine
 (2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
 
+???
+
+what the scope of the finding
 
 
 ---
@@ -220,13 +180,13 @@ new data collection and similar methods used by previous studies.
 
 <br>
 
-### **Scientific studies should be replicable (Material & Methods)**
+### **1. Scientific studies should be replicable (Material & Methods)**
 
 --
 
 <br>
 
-### **With the help of technologies scientific studies should now be reproducible (Research compendium)**
+### **2. With the help of technologies scientific studies should now be reproducible (Research compendium)**
 
 
 ???
@@ -240,6 +200,10 @@ It's a topic about research but quickly due to its nature we are talking about t
 ```{R, echo = FALSE, out.width = "55%"}
 kig("img/knowledge1.png")
 ```
+
+??? 
+
+similar with report 
 
 ---
 # How do we produce knowledge?
@@ -295,10 +259,12 @@ kig("img/workflow1.png")
 kig("img/workflow2.png")
 ```
 
+???
 
+circle : science bringing new tools and with new tools more complex science.
 
 ---
-# Why does reproducibility matter?
+# How do we produce knowledge?
 
 
 ## Analyzing data has become increasingly complex 
@@ -307,19 +273,21 @@ kig("img/workflow2.png")
 
 --
 
-## with more and more `r rfa("laptop-code")` steps 
+## - more and more `r rfa("laptop-code")` steps 
 
 <br>
 
 --
 
-## each step has a certain risk of error.
+## - each step has a certain risk of user error.
+
+--
 
 Recognized in the 80's/90's by [Jon Claerbout](https://en.wikipedia.org/wiki/Jon_Claerbout) and this led to [Redoc](https://ieeexplore.ieee.org/document/881708).
 
 
 ---
-# Why does reproducibility matter?
+# How do we produce knowledge?
 
 
 ## "Publish or perish" system urges scientists to work (too) fast
@@ -344,12 +312,25 @@ also covid money or ego
 # Why does reproducibility matter?
 
 
-```{R, echo = FALSE, out.width = "65%"}
+```{R, echo = FALSE, out.width = "67%"}
 kig("img/replic_osf.png")
 ```
 
-`r rfa("file")` Open Science Collaboration (2015). [Estimating the reproducibility of psychological science.](https://science.sciencemag.org/content/349/6251/aac4716)
+.font80[`r rfa("file")` Open Science Collaboration (2015). [Estimating the reproducibility of psychological science.](https://science.sciencemag.org/content/349/6251/aac4716)]
 
+---
+# Why does reproducibility matter?
+
+
+```{R, echo = FALSE, out.width = "90%"}
+kig("img/replic_osf2.png")
+```
+
+.font80[`r rfa("file")` Open Science Collaboration (2015). [Estimating the reproducibility of psychological science.](https://science.sciencemag.org/content/349/6251/aac4716)]
+
+???
+
+might very well expect that for ecology
 
 ---
 # Why does reproducibility matter?
@@ -359,7 +340,7 @@ kig("img/replic_osf.png")
 kig("img/retractation_index.png")
 ```
 
-`r rfa("file")` Fang & Casadevall. (2011) [Retracted Science and the Retraction Index.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
+.font80[`r rfa("file")` Fang & Casadevall. (2011) [Retracted Science and the Retraction Index.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)]
 
 
 
@@ -374,45 +355,54 @@ kig("img/workflow3.png")
 ---
 # Why does reproducibility matter?
 
-<br>
 
-### **Can do**: make resaerch findings more robusts
+### .font140[**Can do**: make research findings more robust]
 
-<br>
-
-### **Require**: making data and code open
-
-- [Open Science Framework](https://osf.io/) 
-- [rOpenSci](https://ropensci.org/)
-- etc.
+--
 
 
+### .font140[**Require**: making data and code open]
+
+
+--
+
+### .font140[**Collateral benefits**]
+
+  - "**Open science**" movement:
+    - [Open Science Framework](https://osf.io/) 
+    - [rOpenSci](https://ropensci.org/)
+    
+--
+  
+  - re-usage of code can lead to an increase of efficiency;
+  - improved coding skills;
+
+
+???
+
+DB and I have developed coding skills for this.
 
 ---
 # How do reproduce studies
 
-### **Collateral benefits**
 
-- re-usage of code can lead to an increase of efficiency;
-- improved coding skills;
+### .font140[**Obstacle**: it takes **a lot** of time]
 
---
-
-### **Cons**
-
-- takes **a lot** of time.
-
-> It is also important to recognize that **there are costs and barriers to shifting to a practice
-of reproducible research**, particularly when the culture does not recognize the value of
+> It is also important to recognize that there are costs and barriers to shifting to a practice
+of reproducible research, particularly when the culture does not recognize the value of
 developing this new paradigm or the effort that can be required to develop or learn to use
 suitable tools. This is of particular concern to young people who need to earn tenure
 or secure a permanent position.
 
 
-
 .font80[`r rfa("file")` Stodden et al. (2013).
 [Setting the default to reproducible: Reproducibility in Computational and Experimental Mathematics](http://ethics.iit.edu/eelibrary/node/15429)]
 
+
+
+???
+
+I've spent a lot of time on making my studies reproducible but not even sure sb re-run my code, not even sure it'll be useful. What is sure is that I didn't spend that time on other paper and I am "more proud of what I have done". But so far, without a system shift, it could be regarded as a virtue. I am very happy to see DFO is taking this very seriously and understood the collateral benefits. Yes it pays off. There is less technical obstacle, there are better practice. You can do more.
 
 
 ---
@@ -425,25 +415,83 @@ kig("img/spectrum.png")
 .font80[`r rfa("file")` Peng. (2011).
 [Reproducible Research in Computational Science.](https://science.sciencemag.org/content/334/6060/1226)]
 
+
 --
 
-### Towards full reproducibility, technologies are increasingly complex
+### Towards full reproducibility, technologies are getting more complex
 
-- entire pipeline in code
+- entire pipeline in a versioned repository
+
+--
+
 - record all version of software used in the workflow
-- code should not be impacted by OS or hardware
+
+--
+
+- code run without being impacted by OS or hardware
+
+
+
+???
+
+Before making the topics more complex that needed.
+We are aiming at given you a sense of this!! 
+
+
+
+
 
 
 ---
-# Is R suitable for Reproducible?
+
+class: inverse, center, middle
+
+# A minimal workflow with `r rfa("r-project")`
+
+![:custom_hr]()
+
+## `r icon::fontawesome("clock")` ~ 20min
+
+
+???
+
+Questions??
+
+
+
+
+
+
+---
+# You might not be that far! 
+
+### R is suitable for Reproducible
+
+- open source (no license issues)
+
+--
+
+- strong community actively engaged in making science reproducible
+
+--
+
+- [rOpenSci](https://ropensci.org/)
+
+
+???
+
+community ==> made of R user 
+and so are Python and Julia
+
+---
+# Is ?
 
 ### YES YES and YES! 
 
 ### Ropensci
 
 
----
-# You are almost there 
+
 
 - input data in one place and never modify them afterwards
 
