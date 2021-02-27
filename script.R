@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   fig.align = 'center',
   width = 120
 )
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
 rfa <- function(...) icon::fontawesome(...)
 emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
