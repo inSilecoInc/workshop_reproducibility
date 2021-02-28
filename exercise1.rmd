@@ -1,0 +1,48 @@
+---
+title: A Reproducible Workflow exercise
+author: inSileco Inc., David Beauchesne, Kevin Cazelles, Steve Vissault
+date: 2021-03-01
+output:
+  html_document:
+    toc: true
+  word_document:
+    toc: true
+---
+
+# Section 1 title
+
+## Subsection 1 title
+
+*Lorem* **ipsum** ***dolor*** ~~sit~~ amet, consectetur adipiscing elit. Nulla eget ipsum a nulla maximus ornare. Nunc ut nibh orci. Phasellus lacinia velit sed tincidunt euismod. Morbi euismod, lectus et consectetur tristique, urna eros facilisis magna, faucibus condimentum leo dui a enim. Praesent massa velit, egestas et eros eget, ornare tincidunt nisl. Vestibulum mattis enim a enim mattis iaculis. Etiam ipsum tortor, vehicula pretium consequat at, pharetra non mauris. Nam ac facilisis libero. Donec ut arcu gravida, pellentesque eros in, tempor mi.
+
+Numbered list of numbers
+
+1. one
+2. two
+3. three
+
+> A man who dares to waste one hour of time has not discovered the value of life.
+
+![](https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/man/figures/lter_penguins.png)
+
+Artistic drawing of palmer penguins.[^art]
+
+```{r}
+library(palmerpenguins)
+data(penguins)
+head(penguins, 20)
+```
+
+[^art]: Artwork by \@allison_horst
+
+## Subsection 2 title
+
+The [penguins dataset](https://github.com/allisonhorst/palmerpenguins) contains data on `r nrow(penguins)` individuals, `r length(unique(penguins$species))` species, and from `r length(unique(penguins$island))` islands. Across individuals, the mean flipper length is `r mean(penguins$flipper_length_mm)`.
+
+
+```{r}
+plot(x = penguins$flipper_length_mm, y = penguins$body_mass_g, pch = 20, col = '#32c4c4',
+     main = 'Penguin body mass as a function of flipper length',
+     xlab = 'Flipper length (mm)', ylab = 'Body mass (g)')
+
+```

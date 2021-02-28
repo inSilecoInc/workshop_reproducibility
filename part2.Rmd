@@ -1264,23 +1264,32 @@ head(penguins)
 ## Task
 
 .font90[
-**1)** Install the `palmerpenguins` R Package;
+**1)** Install the `palmerpenguins` R Package
 
-**2)** Create a new R Markdown document (`.rmd`);
+**2)** Create a new R Markdown document (`.rmd`)
 
-**3)** Write a .font80[**YAML**] header including the document title, the authors, the date, and output formats html, pdf and word with a table of content for each;
+**3)** Write a .font80[**YAML**] header including the document title, the authors, the date, and output formats html, pdf and word with a table of content for each
 
-**4)** Include a single section (level 1) and two subsections (level 2);
+**4)** Include a single section (level 1) and two subsections (level 2)
+]
 
+
+---
+
+# Exercise
+
+## Task
+
+.font90[
 **5)** In the first subsection:
 
-  - Add paragraphs including normal and formatted text (italic, bold);
+  - Add paragraphs including normal and formatted text (italic, bold)
 
-  - Add artwork from @allison_horst on palmer penguins found on the `palmerpenguins` R Package GitHub repository (https://github.com/allisonhorst/palmerpenguins) as an external image.
+  - Add artwork from @allison_horst on palmer penguins found on the `palmerpenguins` R Package GitHub repository (https://github.com/allisonhorst/palmerpenguins) as an external image
 
-  - Add a footnote to the artwork that states: *"Artwork by @allison_horst"*.
+  - Add a footnote to the artwork that states: *"Artwork by @allison_horst"*
 
-  - Add a code chunk that loads the `palmerpenguins` package and `penguins` dataset. Generate a table with to visualize the first 20 lines of the dataset. For more advanced users, you can use the [`kableExtra`](https://cran.r-project.org/package=kableExtra) R Package to format the table.
+  - Add a code chunk that loads the `palmerpenguins` package and `penguins` dataset. Generate a table with to visualize the first 20 lines of the dataset.
 ]
 
 ---
@@ -2029,11 +2038,13 @@ class: inverse, center, middle
 
 **4)** Modify `figure` code chunk options to set figure size and include a caption;
 
-**5)** Using your reference manager, export a bibliographic file in BiBTeX format titled `mybiblio.bib` and store it in the same folder as your `.rmd` file;
+**5)** Format `table` using `knitr::kable`. For more advanced users, you can use the [`kableExtra`](https://cran.r-project.org/package=kableExtra) R Package to format the table
 
-**6)** Include `mybiblio.bib` to the .font80[**YAML**] header;
+**6)** Using your reference manager, export a bibliographic file in BiBTeX format titled `mybiblio.bib` and store it in the same folder as your `.rmd` file;
 
-**7)** Within the document body, add citations from your bibliographic files using proper citation keys `@id`;
+**7)** Include `mybiblio.bib` to the .font80[**YAML**] header;
+
+**8)** Within the document body, add citations from your bibliographic files using proper citation keys `@id`;
 ]
 
 ---
@@ -2043,17 +2054,17 @@ class: inverse, center, middle
 ## Task
 
 .font90[
-**8)** Change the default citation format (Chicago style) for the format from *The American Naturalist*:
+**9)** Change the default citation format (Chicago style) for the format from *The American Naturalist*:
 
   - Download the `csl` file from [https://www.zotero.org/styles](https://www.zotero.org/styles) and store it in the same folder as your `.rmd` file
 
   - Include `new-style.csl` to the .font80[**YAML**] header
 
-**9)** Add a section header at the end for your reference list
+**10)** Add a section header at the end for your reference list
 
-**10)** For the html document output, use the `lumen` theme
+**11)** For the html document output, use the `lumen` theme
 
-**11)** Render `.html`, `.pdf` and `.docx` documents.
+**12)** Render `.html`, `.pdf` and `.docx` documents.
 ]
 
 
