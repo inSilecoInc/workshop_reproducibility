@@ -19,7 +19,7 @@ class: inverse, center, middle
 A word about setting up those tools depending on the environemnt.
 
 ---
-# Gold standard 
+# Gold standard
 
 ```{R, echo = FALSE, out.width = "80%"}
 kig("img/spectrum.png")
@@ -36,7 +36,7 @@ kig("img/spectrum.png")
 - entire pipeline in a versioned repository
 
 
-- record all version of software used in the workflow
+- record all version(s) of software(s) used in the workflow
 
 
 - code run without being impacted by OS or hardware
@@ -44,7 +44,7 @@ kig("img/spectrum.png")
 
 ???
 
-A tool box of software 
+A tool box of software
 Coding a lot
 
 
@@ -55,15 +55,15 @@ Coding a lot
 
 ## Keep track of code changes...
 
-- to talk about the same piece of code 
+- to talk about the same piece of code
 
 --
 
-- to easy go back in time 
+- to easily go back in time
 
 --
 
-- to tag version of code 
+- to tag code versions
 
 
 ---
@@ -105,11 +105,11 @@ kig("https://git-scm.com/book/en/v2/images/distributed.png")
 # Version control with Git `r emj("computer")`
 
 
-```sh 
-$ git init -b main 
-$ git add -A 
+```sh
+$ git init -b main
+$ git add -A
 $ git commit -m 'initial commit'
-# do changes 
+# do changes
 $ git add R/pipeline.R
 $ git commit -m 'inform user when pipeline() ends'
 # see history
@@ -130,7 +130,7 @@ kig("https://git-scm.com/book/en/v2/images/distributed.png")
 ### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility) repository for this workshop !
 
 ???
- 
+
 push and pull
 show repo
 
@@ -149,7 +149,7 @@ show repo
 ### 2. Write down what it needs to do
 
 ```sh
-ms: ms/ms.Rmd 
+ms: ms/ms.Rmd
 	Rscript -e 'rmarkdown::render("ms/ms.Rmd")'
 ```
 
@@ -194,7 +194,7 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 
 --
 
-### 2. Because R developers are created great packages to develop packages!
+### 2. Because R developers created great packages to develop packages!
 
 
 --
@@ -205,11 +205,11 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 ---
 # Structure your repo as an R package
 
-## Basic structure of an R package 
+## Basic structure of an R package
 
 ```sh
 .
-├── DESCRIPTION 
+├── DESCRIPTION
 ├── doc
 ├── data
 ├── LICENSE
@@ -224,20 +224,20 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 ---
 # Structure your repo as an R package
 
-## Basic structure of an R package 
+## Basic structure of an R package
 
 ```sh
 .
 ├── DESCRIPTION # includes info about package versions
 ├── doc         # include a website
 ├── data
-├── LICENSE     # always good to specify a license 
-├── man         # document function 
-├── NAMESPACE   # no need 
+├── LICENSE     # always good to specify a license
+├── man         # document function
+├── NAMESPACE   # no need
 ├── R
-├── README.md 
-├── tests       # test your code 
-└── vignettes   # include your ms 
+├── README.md
+├── tests       # test your code
+└── vignettes   # include your ms
 ```
 
 
@@ -245,7 +245,7 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 ---
 # Make a R package !
 
-## Is it an overkill? 
+## Is it an overkill?
 
 --
 
@@ -257,7 +257,7 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 
 --
 
-- The collection of packages fro developers makes every steps easy
+- The collection of packages for developers makes every steps easy
 
 --
 
@@ -272,7 +272,7 @@ Yes... it might be a steep learning curve but it's worth it.
 ---
 # Make a R package !
 
-## Benefit from popular development tools 
+## Benefit from popular development tools
 
 ```{r, echo = FALSE, out.width = "42%"}
 kig("https://raw.githubusercontent.com/r-lib/devtools/master/man/figures/logo.svg")
@@ -284,7 +284,7 @@ kig("https://raw.githubusercontent.com/r-lib/devtools/master/man/figures/logo.sv
 ---
 # Make a R package !
 
-### It structures your workflow 
+### It structures your workflow
 
 ```R
 library(devtools)
@@ -306,7 +306,7 @@ shared workflow
 ---
 # Make a R package !
 
-## Benefit from popular development tools 
+## Benefit from popular development tools
 
 ```{r, echo = FALSE, out.width = "42%"}
 kig("https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png")
@@ -324,12 +324,12 @@ kig("https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png
 ```R
 library(usethis)
 usethis::use_gpl_license()
-usethis::use_citation() 
+usethis::use_citation()
 ```
 
 
 ---
-# Manage your dependencies 
+# Manage your dependencies
 
 ## Different R versions, different results!
 
@@ -337,7 +337,7 @@ usethis::use_citation()
 ```R
 # R 3.6
 df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
-plot(val ~ fact, data = df)   # works 
+plot(val ~ fact, data = df)   # works
 # R 4.0
 df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
 plot(val ~ fact, data = df)   # does not work
@@ -349,7 +349,7 @@ plot(val ~ fact, data = df)   # does not work
 
 ```{r, echo = FALSE, out.width = "50%"}
 kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg")
-``` 
+```
 
 `r rfa("github")` [rstudio/renv](https://github.com/rstudio/renv)
 
@@ -358,7 +358,7 @@ kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg"
 
 ## Save all dependencies in renv.lock and install them later seamlessly
 
-```R 
+```R
 renv::init()
 renv::snapshot()
 # later (on another device)
@@ -373,7 +373,7 @@ renv::restore()
 ---
 # Continuous Integration (CI)
 
-## Check your code on a freshly install machine 
+## Check your code on a freshly installed machine
 
 --
 
@@ -381,10 +381,10 @@ renv::restore()
 
 --
 
-## Again, with an R package, everything goes smoothly 
+## Again, with an R package, everything goes smoothly
 
 ```R
-usethis::use_github_action_check_standard() 
+usethis::use_github_action_check_standard()
 ```
 
 ???
@@ -400,22 +400,22 @@ start thinking about OS agnosticism
 
 
 ```{R, echo = FALSE}
-# # Dockerize 
-# 
-# - [docker](https://www.docker.com/) 
-# 
+# # Dockerize
+#
+# - [docker](https://www.docker.com/)
+#
 # ---
-# # Archive 
-# 
+# # Archive
+#
 # - reference [https://zenodo.org/](Zenodo)
-# 
+#
 # ---
 # # Holepunch
-# 
-# - once set up o GH 
-# 
+#
+# - once set up o GH
+#
 # https://github.com/karthik/holepunch
-# 
+#
 # https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
 # https://github.com/ropensci/targets
 # https://github.com/wlandau/targets-minimal

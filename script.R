@@ -273,22 +273,22 @@ kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg"
 
 
 ## ---- echo = FALSE------------------------------------------------------------
-# # Dockerize 
-# 
-# - [docker](https://www.docker.com/) 
-# 
+# # Dockerize
+#
+# - [docker](https://www.docker.com/)
+#
 # ---
-# # Archive 
-# 
+# # Archive
+#
 # - reference [https://zenodo.org/](Zenodo)
-# 
+#
 # ---
 # # Holepunch
-# 
-# - once set up o GH 
-# 
+#
+# - once set up o GH
+#
 # https://github.com/karthik/holepunch
-# 
+#
 # https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
 # https://github.com/ropensci/targets
 # https://github.com/wlandau/targets-minimal

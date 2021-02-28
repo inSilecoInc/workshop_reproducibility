@@ -1,6 +1,6 @@
 ---
 title: part2
---- 
+---
 
 ---
 class: inverse, center, middle
@@ -11,6 +11,8 @@ class: inverse, center, middle
 ![:custom_hr]()
 
 ## `r rfa("database")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("r-project")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("cogs")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("file")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("sync-alt")`
+
+## `r icon::fontawesome("clock")` ~ 60min
 
 ---
 
@@ -190,6 +192,17 @@ class: inverse, center, middle
 > Convert R Markdown documents into a variety of formats.
 
 <center><img src="img/Rmdformat.png" style="vertical-align: middle"></img></center>
+
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
 
 
 ---
@@ -432,6 +445,17 @@ output:
 ```
 ]
 
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
+
+
 
 ---
 
@@ -514,34 +538,6 @@ __Bold__ **text**
 
 .pull-right[
 .font80[~~Strikethrough text~~]
-]
-
---
-
-.pull-left[
-.font80[
-```md
-Supersript^text^
-```
-]
-]
-
-.pull-right[
-.font80[Superscript^2^]
-]
-
---
-
-.pull-left[
-.font80[
-```md
-Subscript~text~
-```
-]
-]
-
-.pull-right[
-.font80[Subscript~2~]
 ]
 
 
@@ -975,6 +971,16 @@ and $c$ is the speed of light.
 ]
 ]
 
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
+
 
 
 ---
@@ -1164,6 +1170,26 @@ We studied `r length(levels(iris$Species))` iris species and took measurements o
 We found that Iris virginica had the longest sepal with a mean of `r mean(iris$Sepal.Length[iris$Species=="virginica"])` millimeters!
 ````
 
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
+
+
+---
+
+class: inverse, center, middle
+
+# Wrap up
+
+![:custom_hr]()
+
+
 
 ---
 
@@ -1188,11 +1214,22 @@ We found that Iris virginica had the longest sepal with a mean of `r mean(iris$S
 
 ---
 
-# Exercice
+class: inverse, center, middle
+
+# Exercise
+
+![:custom_hr]()
+
+
+
+
+---
+
+# Exercise
 
 ## Context
 
-- *The goal of the exercice is to apply what we have seen today to generate a dynamic document using R Markdown.*
+- *The goal of the exercise is to apply what we have seen today to generate a dynamic document using R Markdown.*
 
 --
 
@@ -1209,7 +1246,7 @@ data(package = 'palmerpenguins')
 
 ---
 
-# Exercice
+# Exercise
 
 ## Context
 
@@ -1222,7 +1259,7 @@ head(penguins)
 
 ---
 
-# Exercice
+# Exercise
 
 ## Task
 
@@ -1248,7 +1285,7 @@ head(penguins)
 
 ---
 
-# Exercice
+# Exercise
 
 ## Task
 
@@ -1270,6 +1307,15 @@ head(penguins)
 ```{r, echo = FALSE, purl = FALSE}
 countdown::countdown(minutes = 30, seconds = 0)
 ```
+
+---
+
+class: inverse, center, middle
+
+# This is it for today!
+
+![:custom_hr]()
+
 
 
 ---
@@ -1555,7 +1601,7 @@ ggplot(data = iris,
 
 # `r rfa("code")` Code chunk options
 
-## Options `fig.cap`
+## Option `fig.cap`
 
 .pull-left[
 ### `r rfa("code")` Syntax
@@ -1625,6 +1671,18 @@ knitr::opts_chunk$set(
 )
 ```
 ````
+
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
+
 
 
 ---
@@ -1822,6 +1880,18 @@ csl: mystyle.csl
 ]
 
 
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
+
+
 ---
 
 class: inverse, center, middle
@@ -1924,11 +1994,21 @@ class: inverse, center, middle
 
 ---
 
-# Exercice
+class: inverse, center, middle
+
+# Exercise
+
+![:custom_hr]()
+
+
+
+---
+
+# Exercise
 
 ## Context
 
-- *The goal of the exercice is to apply what we have seen today to update the dynamic document with generated yesterday using R Markdown.*
+- *The goal of the exercise is to apply what we have seen today to update the dynamic document with generated yesterday using R Markdown.*
 
 --
 
@@ -1936,7 +2016,7 @@ class: inverse, center, middle
 
 ---
 
-# Exercice
+# Exercise
 
 ## Task
 
@@ -1958,7 +2038,7 @@ class: inverse, center, middle
 
 ---
 
-# Exercice
+# Exercise
 
 ## Task
 
