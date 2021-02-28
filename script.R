@@ -72,6 +72,10 @@ kig("img/retractation_index.png")
 
 
 ## ---- echo = FALSE, out.width = "55%"-----------------------------------------
+kig("img/workflow2.png")
+
+
+## ---- echo = FALSE, out.width = "55%"-----------------------------------------
 kig("img/workflow3.png")
 
 

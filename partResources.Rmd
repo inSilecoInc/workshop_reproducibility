@@ -9,7 +9,6 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## `r icon::fontawesome("clock")` ~ 30min
 
 
 ---

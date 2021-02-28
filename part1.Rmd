@@ -139,7 +139,10 @@ new data collection and similar methods used by previous studies.
 
 ???
 
-what the scope of the finding
+what the scope of the finding. There is a study on stressor that affect 
+the mortality of a given bird species. Then I think studying this on a second 
+bird species and I don't find any significance. Then studies may very well be replicable 
+but it is not generalizabe to the second bird species. 
 
 
 ---
@@ -315,21 +318,40 @@ kig("img/retractation_index.png")
 ---
 # Why does reproducibility matter?
 
-```{R, echo = FALSE, out.width = "55%"}
-kig("img/workflow3.png")
-```
+<br>
+
+### **Reproducible Research leads to scientific findings more robust/reliable by minimizing user errors**
 
 
 ---
-# Why does reproducibility matter?
+# Reproducible workflows
 
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/workflow2.png")
+```
 
-### .font140[**Can do**: make research findings more robust]
+---
+# Reproducible workflows
+
+```{R, echo = FALSE, out.width = "55%"}
+kig("img/workflow3.png")
+```
+--
+
+### .font120[`r rfa("redo")` **Reproducible workflows** / **Research compendia**]
+
+---
+# Reproducible workflows
+
+### .font140[**Can do**? make research findings more robust/reliable.]
 
 --
 
+### .font140[**How**? by adopting good coding practices.]
 
-### .font140[**Require**: making data and code open]
+--
+
+### .font140[**Require**? making data and code open.]
 
 
 --
@@ -385,40 +407,8 @@ or secure a permanent position.
 
 ???
 
-I've spent a lot of time on making my studies reproducible but not even sure sb re-run my code, not even sure it'll be useful. What is sure is that I didn't spend that time on other paper and I am "more proud of what I have done". But so far, without a system shift, it could be regarded as a virtue. I am very happy to see DFO is taking this very seriously and understood the collateral benefits. Yes it pays off. There is less technical obstacle, there are better practice. You can do more.
+I've spent a lot of time on making my studies reproducible but not even sure sb re-run my code, not even sure it'll be useful. What is sure is that I didn't spend that time on other papers and I am "more proud of what I have done". But so far, without a system shift, it could be regarded as a virtue. I am very happy to see DFO is taking this very seriously and understood the collateral benefits. Yes it pays off. There is less technical obstacle, there are better practice. You can do more.
 
-
----
-# A reproducibility spectrum
-
-```{R, echo = FALSE, out.width = "80%"}
-kig("img/spectrum.png")
-```
-
-.font80[`r rfa("file")` Peng. (2011).
-[Reproducible Research in Computational Science.](https://science.sciencemag.org/content/334/6060/1226)]
-
-
---
-
-### Towards full reproducibility, technologies are getting more complex
-
-- entire pipeline in a versioned repository
-
---
-
-- record all version(s) of software(s) used in the workflow
-
---
-
-- run code without being impacted by OS or hardware
-
-
-
-???
-
-Before making the topics more complex that needed.
-We are aiming at given you a sense of this!!
 
 
 
@@ -457,17 +447,60 @@ Questions??
 
 `r rfa("video")` Ignasi Bartomeus (2016) [a reproducible workflow](https://www.youtube.com/watch?v=s3JldKoA0zw).
 
+--
+
+## There are clear benefits of using a reproducible workflow!
+
+
+???
+click and change all values... will certainly lead to errors...
+Avoid re-doing every by hand! Instead, set up your repository.
+
+
+
+
+---
+# A reproducibility spectrum
+
+```{R, echo = FALSE, out.width = "80%"}
+kig("img/spectrum.png")
+```
+
+.font80[`r rfa("file")` Peng. (2011).
+[Reproducible Research in Computational Science.](https://science.sciencemag.org/content/334/6060/1226)]
+
+
+??? 
+
+You quicly get benefits! 
+
+--
+
+### Towards full reproducibility, technologies are getting more complex
+
+- entire pipeline in a versioned repository
+
+--
+
+- record all version(s) of software(s) used in the workflow
+
+--
+
+- run code without being impacted by OS or hardware
+
+
 
 ???
 
-Avoid re-doing every by hand! Instead, set up your repository.
+Before making the topics more complex that needed.
+We are aiming at given you a sense of this!!
 
 
 
 ---
 # You might not be that far!
 
-### R is suitable for Reproducibility
+### `r rfa("r-project")` is suitable for Reproducibility
 
 - open source (no license-related issues)
 
@@ -495,7 +528,7 @@ and so are Python and Julia
 # You might not be that far!
 
 
-### One well-structured folder! [Download it](demo/min_workflow.zip).
+### One well-structured folder! [Download it](https://github.com/inSilecoInc/workshop_reproducibility/raw/main/demo/min_workflow.zip).
 
 --
 
@@ -565,10 +598,9 @@ and so are Python and Julia
 ### 1. The folder must be self contained
 
   - think of the root of the folder as the root of the system
-  - nothing beyond locally
   - ~~C:\user/data\dat0001.txt~~
   - but this system is not isolated (e.g. remote)
-  - does not mean everything will be shared
+  - does not mean everything will be shared / added in the research compendium
 
 ---
 # You might not be that far!
@@ -580,7 +612,7 @@ and so are Python and Julia
 
   - your datasets (could be a link to relevant documentation)
   - your functions and scripts
-  - and the trick you've used that won't be clear to others (that future yourself)
+  - and the tricks you've used that won't be clear to others (that includes future yourself!)
 
 ---
 # You might not be that far!
@@ -589,9 +621,9 @@ and so are Python and Julia
 ## Follow 3 simple rules!
 
 
-### 3. Keep track of all versions used
+### 3. Keep track of all versions you've used
 
-  - R version
+  - R version (and other software)
   - Package versions
 
 <br><br>
