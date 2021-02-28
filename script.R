@@ -234,6 +234,67 @@ ggplot(data = iris,
 
 
 
+## ---- child = "part3.Rmd"-----------------------------------------------------
+
+## ---- echo = FALSE, out.width = "80%"-----------------------------------------
+kig("img/spectrum.png")
+
+
+## ---- echo = FALSE, out.width = "50%"-----------------------------------------
+kig("https://git-scm.com/book/en/v2/images/local.png")
+
+
+## ---- echo = FALSE, out.width = "50%"-----------------------------------------
+kig("https://git-scm.com/book/en/v2/images/centralized.png")
+
+
+## ---- echo = FALSE, out.width = "42%"-----------------------------------------
+kig("https://git-scm.com/book/en/v2/images/distributed.png")
+
+
+## ---- echo = FALSE, out.width = "42%"-----------------------------------------
+kig("https://git-scm.com/book/en/v2/images/distributed.png")
+
+
+## ---- echo = FALSE, out.width = "42%"-----------------------------------------
+kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
+
+
+## ---- echo = FALSE, out.width = "42%"-----------------------------------------
+kig("https://raw.githubusercontent.com/r-lib/devtools/master/man/figures/logo.svg")
+
+
+## ---- echo = FALSE, out.width = "42%"-----------------------------------------
+kig("https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png")
+
+
+## ---- echo = FALSE, out.width = "50%"-----------------------------------------
+kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg")
+
+
+## ---- echo = FALSE------------------------------------------------------------
+# # Dockerize 
+# 
+# - [docker](https://www.docker.com/) 
+# 
+# ---
+# # Archive 
+# 
+# - reference [https://zenodo.org/](Zenodo)
+# 
+# ---
+# # Holepunch
+# 
+# - once set up o GH 
+# 
+# https://github.com/karthik/holepunch
+# 
+# https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
+# https://github.com/ropensci/targets
+# https://github.com/wlandau/targets-minimal
+
+
+
 ## ---- child = "partResources.Rmd"---------------------------------------------
 
 ## ---- echo = FALSE, out.width = "70%"-----------------------------------------

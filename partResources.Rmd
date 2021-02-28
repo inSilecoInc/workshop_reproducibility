@@ -72,4 +72,4 @@ Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
 - inSileco https://insilecoinc.github.io/
 - David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
 - Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
-
+- Steve Vissault [`r rfa("envelope")`](s.vissault@yahoo.fr)
