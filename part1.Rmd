@@ -61,9 +61,9 @@ kig("img/r_words.png")
 --
 
 ### **no distinction** (A)
-  
+
 --
-  
+
 ### **distinction** :
 - for some (B1):
   - *reproducible*: authors provide data + computer code to re-create the results.
@@ -100,27 +100,27 @@ kig("img/cover_rrs.png")
 ```
 
 `r rfa("file")` National Academies of Sciences, Engineering, and Medicine
-(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science).
 
 
 ---
 # Terminology is being clarified
 
 > We define **reproducibility** to mean **computational reproducibility**—­
-obtaining consistent computational results using the same **input data**, computational steps, methods, **code**, and conditions of analysis; 
+obtaining consistent computational results using the same **input data**, computational steps, methods, **code**, and conditions of analysis;
 
 --
 
 > and **replicability** to mean obtaining **consistent results across studies aimed at answering the
-same scientific question**, each of which has obtained its own data. 
+same scientific question**, each of which has obtained its own data.
 
 --
 
 > In short, reproducibility involves the original data and code; replicability involves
-new data collection and similar methods used by previous studies. 
+new data collection and similar methods used by previous studies.
 
 `r rfa("file")` National Academies of Sciences, Engineering, and Medicine
-(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science).
 
 ???
 
@@ -135,7 +135,7 @@ new data collection and similar methods used by previous studies.
 
 
 `r rfa("file")` National Academies of Sciences, Engineering, and Medicine
-(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science). 
+(2019). [Reproducibility and Replicability in Science](https://www.nap.edu/catalog/25303/reproducibility-and-replicability-in-science).
 
 ???
 
@@ -168,9 +168,10 @@ It's a topic about research but quickly due to its nature we are talking about t
 kig("img/knowledge1.png")
 ```
 
-??? 
 
-similar with report 
+???
+
+similar with report
 
 ---
 # How do we produce knowledge?
@@ -186,7 +187,7 @@ kig("img/knowledge2.png")
 kig("img/knowledge3.png")
 ```
 
-`r rfa("file")` Goodman et al. (2016). [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12). 
+`r rfa("file")` Goodman et al. (2016). [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12).
 
 
 ---
@@ -198,7 +199,7 @@ kig("img/knowledge2.png")
 
 ???
 
-only retrieve data!!not carry out experiment 
+only retrieve data!!not carry out experiment
 getting more complex in terms of computataional steps.
 
 
@@ -234,13 +235,13 @@ circle : science bringing new tools and with new tools more complex science.
 # How do we produce knowledge?
 
 
-## Analyzing data has become increasingly complex 
+## Analyzing data has become increasingly complex
 
 <br>
 
 --
 
-## - more and more `r rfa("laptop-code")` steps 
+## - more and more `r rfa("laptop-code")` steps
 
 <br>
 
@@ -263,8 +264,8 @@ Recognized in the 80's/90's by [Jon Claerbout](https://en.wikipedia.org/wiki/Jon
 
 --
 
-## and to adopt "questionable research practices" 
-  - p-value hacking, 
+## and to adopt "questionable research practices"
+  - p-value hacking,
   - cherry picking,
   - Hypothesizing After Results are Known (HARKing).
 
@@ -336,11 +337,11 @@ kig("img/workflow3.png")
 ### .font140[**Collateral benefits**]
 
   - "**Open science**" movement:
-    - [Open Science Framework](https://osf.io/) 
+    - [Open Science Framework](https://osf.io/)
     - [rOpenSci](https://ropensci.org/)
-    
+
 --
-  
+
   - re-usage of code can lead to an increase of efficiency;
   - improved coding skills;
 
@@ -350,7 +351,7 @@ kig("img/workflow3.png")
 DB and I have developed coding skills for this.
 
 ---
-# How do reproduce studies
+# How to reproduce studies
 
 ### .font140[Reproducibility will not solve all issues]
 
@@ -365,7 +366,7 @@ DB and I have developed coding skills for this.
 
 
 ---
-# How do reproduce studies
+# How to reproduce studies
 
 
 ### .font140[**Obstacle**: it takes **a lot** of time]
@@ -388,7 +389,7 @@ I've spent a lot of time on making my studies reproducible but not even sure sb 
 
 
 ---
-# A reproducibility spectrum 
+# A reproducibility spectrum
 
 ```{R, echo = FALSE, out.width = "80%"}
 kig("img/spectrum.png")
@@ -406,21 +407,31 @@ kig("img/spectrum.png")
 
 --
 
-- record all version of software used in the workflow
+- record all version(s) of software(s) used in the workflow
 
 --
 
-- code run without being impacted by OS or hardware
+- run code without being impacted by OS or hardware
 
 
 
 ???
 
 Before making the topics more complex that needed.
-We are aiming at given you a sense of this!! 
+We are aiming at given you a sense of this!!
 
 
 
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]
 
 
 
@@ -449,14 +460,14 @@ Questions??
 
 ???
 
-Avoid re-doing every by hand! Instead, set up your repository. 
+Avoid re-doing every by hand! Instead, set up your repository.
 
 
 
 ---
-# You might not be that far! 
+# You might not be that far!
 
-### R is suitable for Reproducible
+### R is suitable for Reproducibility
 
 - open source (no license-related issues)
 
@@ -465,9 +476,9 @@ Avoid re-doing every by hand! Instead, set up your repository.
 - strong community actively engaged in making science more reproducible
 
 --
-  
-- A large diversity of package for reproducibility purposes 
-  - to packages to improve the workflow
+
+- A large diversity of package for reproducibility purposes
+  - packages to improve the workflow
 
 --
 
@@ -476,14 +487,14 @@ Avoid re-doing every by hand! Instead, set up your repository.
 
 ???
 
-community ==> made of R user 
+community ==> made of R user
 and so are Python and Julia
 
 
 ---
-# You might not be that far! 
+# You might not be that far!
 
- 
+
 ### One well-structured folder! [Download it](demo/min_workflow.zip).
 
 --
@@ -506,81 +517,81 @@ and so are Python and Julia
 
 
 ---
-# You might not be that far! 
+# You might not be that far!
 
 
 - `r emj("file_folder")` `R` : R code (`.R` files)
-  
-  - functions, scripts ... 
+
+  - functions, scripts ...
   - data retrieval, statistical analysis, figure
-  
-<br>  
+
+<br>
 
 --
 
-- `r emj("file_folder")` `data` : 
+- `r emj("file_folder")` `data` :
 
-  - input/raw data 
+  - input/raw data
   - processed data
   - data may be archived on line (e.g. Dryad) and may be accessed via a script (see [rdryad](https://docs.ropensci.org/rdryad/))
 
 ---
-# You might not be that far! 
+# You might not be that far!
 
 
-- `r emj("file_folder")` `output` (`fig` `tab`): 
+- `r emj("file_folder")` `output` (`fig` `tab`):
 
-  - figures 
-  - tables 
+  - figures
+  - tables
 
-<br>  
+<br>
 
 --
 
 - `r emj("file_folder")` `ms` (`doc`)
 
-  - main manuscript 
+  - main manuscript
   - Supplementary Information (SI)
 
 
 
 ---
-# You might not be that far! 
+# You might not be that far!
 
 
-## Follow 3 simple rules! 
+## Follow 3 simple rules!
 
 
 ### 1. The folder must be self contained
-  
-  - think of the root of the folder as the root of the system 
-  - nothing beyond locally 
+
+  - think of the root of the folder as the root of the system
+  - nothing beyond locally
   - ~~C:\user/data\dat0001.txt~~
   - but this system is not isolated (e.g. remote)
   - does not mean everything will be shared
-  
+
 ---
-# You might not be that far! 
+# You might not be that far!
 
 
-## Follow 3 simple rules! 
-  
+## Follow 3 simple rules!
+
 ### 2. document massively
 
   - your datasets (could be a link to relevant documentation)
-  - your functions and scripts 
-  - and the trick you've used that won't be clear to others (that future yourself) 
+  - your functions and scripts
+  - and the trick you've used that won't be clear to others (that future yourself)
 
 ---
-# You might not be that far! 
+# You might not be that far!
 
 
-## Follow 3 simple rules! 
+## Follow 3 simple rules!
 
 
 ### 3. Keep track of all versions used
 
-  - R version 
+  - R version
   - Package versions
 
 <br><br>
@@ -595,4 +606,13 @@ Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
 --
 
 ## Zip it, add is as SI, 80% of the job is done !
- 
+
+---
+
+class: inverse, center, middle
+
+# Questions?
+
+![:custom_hr]()
+
+## .font150[`r icon::fontawesome("question-circle")`]

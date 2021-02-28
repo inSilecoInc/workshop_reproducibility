@@ -82,11 +82,11 @@ class: inverse, center, middle
 
 <br>
 
-### 1. Understand the importance of reproducible research and
+### 1. Understand the importance of reproducible research,
 
-### 2. Understand how R can be useful to that end
+### 2. Understand how R can be useful for reproducible research
 
-### 3. Being able to create a simple R Markdown document including a reproducible analysis 
+### 3. Create a simple R Markdown document including a reproducible analysis 
 
 
 
@@ -112,4 +112,3 @@ class: inverse, center, middle
 
 ```{r, child = "partResources.Rmd" }
 ```
-
