@@ -1,35 +1,6 @@
 ---
 title: "Part 3"
-output:
-  xaringan::moon_reader:
-    css: [default, rd.css, rd-font.css, "hygge"]
-    lib_dir: assets
-    seal: false
-    nature:
-      highlightStyle: dracula
-      countIncrementalSlides: false
-      beforeInit: "macros.js"
 ---
-
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  comment = "#>",
-  collapse = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  dev = "png",
-  dpi = 108,
-  fig.width = 6,
-  fig.height = 4.5,
-  fig.align = 'center',
-  width = 120
-)
-options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
-rfa <- function(...) icon::fontawesome(...)
-emj <- function(...) emo::ji(...)
-kig <- function(...) knitr::include_graphics(...)
-```
 
 
 ---
@@ -213,23 +184,34 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 
 
 ---
-# Make a R package !
+# Structure your repo as an R package
 
 ## Why?
 
-- check you code 
+--
+
+### 1. Because the structure of an R package is very relevant for research compendia
+
+--
+
+### 2. Because R developers are created great packages to develop packages!
+
+
+--
+
+`r rfa("file")` Marwick et al. (2018) [Packaging Data Analytical Work Reproducibly Using R (and Friends)](https://www.tandfonline.com/doi/abs/10.1080/00031305.2017.1375986)
 
 
 ---
+# Structure your repo as an R package
 
-Package
+## Basic structure of an R package 
 
-```
+```sh
 .
-├── DESCRIPTION
+├── DESCRIPTION 
 ├── doc
 ├── data
-├── inst
 ├── LICENSE
 ├── man
 ├── NAMESPACE
@@ -239,20 +221,117 @@ Package
 └── vignettes
 ```
 
+---
+# Structure your repo as an R package
+
+## Basic structure of an R package 
+
+```sh
+.
+├── DESCRIPTION # includes info about package versions
+├── doc         # include a website
+├── data
+├── LICENSE     # always good to specify a license 
+├── man         # document function 
+├── NAMESPACE   # no need 
+├── R
+├── README.md 
+├── tests       # test your code 
+└── vignettes   # include your ms 
+```
+
+
 
 ---
 # Make a R package !
 
+## Is it an overkill? 
+
+--
+
+### **NO!**
+
+--
+
+- Jim Hester (2018) [You can make a package in 20 minutes](https://rstudio.com/resources/rstudioconf-2018/you-can-make-a-package-in-20-minutes-jim-hester/)
+
+--
+
+- The collection of packages fro developers makes every steps easy
+
+--
+
+- This is a very good avenue to go even further
+
+
+???
+
+Yes... it might be a steep learning curve but it's worth it.
+
 
 ---
 # Make a R package !
 
+## Benefit from popular development tools 
+
+```{r, echo = FALSE, out.width = "42%"}
+kig("https://raw.githubusercontent.com/r-lib/devtools/master/man/figures/logo.svg")
+```
+
+`r rfa("github")` [r-lib/devtools](https://github.com/r-lib/devtools/)
+
+
+---
+# Make a R package !
+
+### It structures your workflow 
+
+```R
+library(devtools)
+# load all functions
+load_all()
+# document functions and edit Namespace
+document()
+# test functions
+test()
+# check the package integrity
+check()
+```
+
+???
+
+shared workflow
+
+
+---
+# Make a R package !
+
+## Benefit from popular development tools 
+
+```{r, echo = FALSE, out.width = "42%"}
+kig("https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png")
+```
+
+`r rfa("github")` [r-lib/usethis](https://github.com/r-lib/usethis)
+
+
+
+---
+# Make a R package !
+
+> usethis is a workflow package: it automates repetitive tasks that arise during project setup and development, both for R packages and non-package projects.
+
+```R
+library(usethis)
+usethis::use_gpl_license()
+usethis::use_citation() 
+```
 
 
 ---
 # Manage your dependencies 
 
-## Different R version different results
+## Different R versions, different results!
 
 
 ```R
@@ -264,46 +343,80 @@ df <- data.frame(fact = rep(c("F1", "F2"), each = 5), val = runif(10))
 plot(val ~ fact, data = df)   # does not work
 ```
 
-- Manage the depencies [`renv`](https://cran.r-project.org/web/packages/renv/)
-- https://rstudio.github.io/renv/articles/renv.html
+
+---
+# Manage your dependencies
+
+```{r, echo = FALSE, out.width = "50%"}
+kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg")
+``` 
+
+`r rfa("github")` [rstudio/renv](https://github.com/rstudio/renv)
+
+---
+# Manage your dependencies
+
+## Save all dependencies in renv.lock and install them later seamlessly
+
+```R 
+renv::init()
+renv::snapshot()
+# later (on another device)
+renv::restore()
+```
+
+`r rfa("file")` [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)
+
+
 
 
 ---
-# use a CI 
+# Continuous Integration (CI)
 
 ## Check your code on a freshly install machine 
 
-## GitHub action
+--
+
+### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility/actions) repository for this workshop !
+
+--
+
+## Again, with an R package, everything goes smoothly 
+
+```R
+usethis::use_github_action_check_standard() 
+```
+
+???
+
+start thinking about OS agnosticism
 
 
 ---
-# Dockerize 
+# Archive your repository
 
-- [docker](https://www.docker.com/) 
-
----
-# Archive 
-
-- reference [https://zenodo.org/](Zenodo)
-
-
----
-# Holepunch
-
-- once set up om GH 
-
-
-# Make a R package 
-
-Getting the 
-
-https://github.com/karthik/holepunch
+- [https://zenodo.org/](Zenodo)
 
 
 
-
-
-https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
-https://github.com/ropensci/targets
-https://github.com/wlandau/targets-minimal
-
+```{R, echo = FALSE}
+# # Dockerize 
+# 
+# - [docker](https://www.docker.com/) 
+# 
+# ---
+# # Archive 
+# 
+# - reference [https://zenodo.org/](Zenodo)
+# 
+# ---
+# # Holepunch
+# 
+# - once set up o GH 
+# 
+# https://github.com/karthik/holepunch
+# 
+# https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
+# https://github.com/ropensci/targets
+# https://github.com/wlandau/targets-minimal
+```

@@ -90,13 +90,10 @@ class: inverse, center, middle
 
 
 
-
 <!-- PART 1  -->
 
 ```{r, child = "part1.Rmd" }
 ```
-
-
 
 
 <!-- PART 2 -->
@@ -105,12 +102,14 @@ class: inverse, center, middle
 ```
 
 
+<!-- PART 2 -->
+
+```{r, child = "part3.Rmd" }
+```
+
 
 <!-- RESOURCES -->
 
 ```{r, child = "partResources.Rmd" }
 ```
-
-
-
 
