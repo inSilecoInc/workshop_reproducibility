@@ -1,6 +1,8 @@
 # Workshop-specific files
 
 *.html
+*.pdf
+*.docx
 index.pdf
 assets/
 index_files/
