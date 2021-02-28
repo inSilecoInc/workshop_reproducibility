@@ -172,6 +172,7 @@ ms: ms/ms.Rmd
 ---
 # Use a pipeline toolkit: [targets](https://www.gnu.org/software/make/manual/make.html)
 
+> The targets package is a Make-like pipeline toolkit for Statistics and data science in R.
 
 ```{r, echo = FALSE, out.width = "42%"}
 kig("https://docs.ropensci.org/targets/reference/figures/logo.png")

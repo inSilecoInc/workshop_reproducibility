@@ -470,10 +470,6 @@ kig("img/spectrum.png")
 [Reproducible Research in Computational Science.](https://science.sciencemag.org/content/334/6060/1226)]
 
 
-??? 
-
-You quicly get benefits! 
-
 --
 
 ### Towards full reproducibility, technologies are getting more complex
@@ -491,6 +487,8 @@ You quicly get benefits!
 
 
 ???
+
+You quickly get benefits! 
 
 Before making the topics more complex that needed.
 We are aiming at given you a sense of this!!
@@ -635,9 +633,33 @@ Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
 ---
 # You might not be that far! `r emj("computer")`
 
+
+## A minimal workflow with this folder
+
 --
 
-## Zip it, add is as SI, 80% of the job is done !
+### 1. Add data / edit code
+
+--
+
+### 2. source R function / render your manuscript / `pipeline()`
+
+--
+
+### 3. repeat until your entire analysis is completed!
+
+
+--
+
+<br>
+
+
+## Zip this folder `r rfa("arrow-right")` research compendium.
+
+
+???
+
+80% of the job is done !
 
 ---
 
