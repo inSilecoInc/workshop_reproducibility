@@ -49,9 +49,8 @@ class: title-slide, middle
   `r format(Sys.time(), '%B %d, %Y')`
   <br>
   .font200[
-  [`r rfa("github")`](https://github.com/inSilecoInc)
-  [`r rfa("database")`](link_to_data)
-  [`r rfa("file-pdf")`](link_to_pdf_version)
+  [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility)
+  <!-- [`r rfa("file-pdf")`](link_to_pdf_version) -->
   ]
 ]
 
