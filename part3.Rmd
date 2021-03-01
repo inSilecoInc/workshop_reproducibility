@@ -1,7 +1,37 @@
 ---
 title: "Part 3"
+output:
+  xaringan::moon_reader:
+    css: [default, rd.css, rd-font.css, "hygge"]
+    lib_dir: assets
+    seal: false
+    nature:
+      highlightStyle: dracula
+      countIncrementalSlides: false
+      beforeInit: "macros.js"
 ---
 
+
+```{r setup3, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  dev = "png",
+  dpi = 108,
+  fig.width = 6,
+  fig.height = 4.5,
+  fig.align = 'center',
+  width = 120
+)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+rfa <- function(...) icon::fontawesome(...)
+emj <- function(...) emo::ji(...)
+kig <- function(...) knitr::include_graphics(...)
+```
+
+---
 
 ---
 
@@ -11,17 +41,20 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
+## `r rfa("database")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("r-project")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("cogs")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("file")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("sync-alt")`
+
 ## `r icon::fontawesome("clock")` ~ 30min
 
 
 ???
 
-A word about setting up those tools depending on the environemnt.
+A word about setting up those tools depending on the environment.
+A word about that all are not needed.
 
 ---
 # Gold standard
 
-```{R, echo = FALSE, out.width = "80%"}
+```{R, echo = FALSE, out.width = "80%", purl = FALSE}
 kig("img/spectrum.png")
 ```
 
@@ -55,6 +88,8 @@ Coding a lot
 
 ## Keep track of code changes...
 
+--
+
 - to talk about the same piece of code
 
 --
@@ -67,22 +102,22 @@ Coding a lot
 
 
 ---
-# Version control with Git
+# Version control
 
 ### Local versioning
 
-```{r, echo = FALSE, out.width = "50%"}
+```{r, echo = FALSE, out.width = "50%", purl = FALSE}
 kig("https://git-scm.com/book/en/v2/images/local.png")
 ```
 
 `r rfa("book")` Chacon & Straub (2014) [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
 ---
-# Version control with Git
+# Version control
 
 ### Centralized version control
 
-```{r, echo = FALSE, out.width = "50%"}
+```{r, echo = FALSE, out.width = "50%", purl = FALSE}
 kig("https://git-scm.com/book/en/v2/images/centralized.png")
 ```
 
@@ -94,7 +129,7 @@ kig("https://git-scm.com/book/en/v2/images/centralized.png")
 
 ### Distributed version control such as Git
 
-```{r, echo = FALSE, out.width = "42%"}
+```{r, echo = FALSE, out.width = "42%", purl = FALSE}
 kig("https://git-scm.com/book/en/v2/images/distributed.png")
 ```
 
@@ -123,7 +158,7 @@ $ git checkout HEAD~1
 ---
 # Version control with Git + GitHub/Gitlab
 
-```{r, echo = FALSE, out.width = "42%"}
+```{r, echo = FALSE, out.width = "42%", purl = FALSE}
 kig("https://git-scm.com/book/en/v2/images/distributed.png")
 ```
 
@@ -174,7 +209,7 @@ ms: ms/ms.Rmd
 
 > The targets package is a Make-like pipeline toolkit for Statistics and data science in R.
 
-```{r, echo = FALSE, out.width = "42%"}
+```{r, echo = FALSE, out.width = "42%", purl = FALSE}
 kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 ```
 
@@ -275,7 +310,7 @@ Yes... it might be a steep learning curve but it's worth it.
 
 ## Benefit from popular development tools
 
-```{r, echo = FALSE, out.width = "42%"}
+```{r, echo = FALSE, out.width = "42%", purl = FALSE}
 kig("https://raw.githubusercontent.com/r-lib/devtools/master/man/figures/logo.svg")
 ```
 
@@ -309,7 +344,7 @@ shared workflow
 
 ## Benefit from popular development tools
 
-```{r, echo = FALSE, out.width = "42%"}
+```{r, echo = FALSE, out.width = "42%", purl = FALSE}
 kig("https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png")
 ```
 
@@ -348,7 +383,7 @@ plot(val ~ fact, data = df)   # does not work
 ---
 # Manage your dependencies
 
-```{r, echo = FALSE, out.width = "50%"}
+```{r, echo = FALSE, out.width = "50%", purl = FALSE}
 kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg")
 ```
 
