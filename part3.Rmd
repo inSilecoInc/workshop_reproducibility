@@ -66,13 +66,6 @@ kig("img/spectrum.png")
 ### Towards full reproducibility, technologies are getting more complex
 
 
-- entire pipeline in a versioned repository
-
-
-- record all version(s) of software(s) used in the workflow
-
-
-- code run without being impacted by OS or hardware
 
 
 ???
@@ -86,7 +79,13 @@ Coding a lot
 
 --
 
-## Keep track of code changes...
+### **I've changed something... not sure what... but it no longer works!**
+
+--
+
+<br>
+
+### **Keep track of code changes...**
 
 --
 
@@ -163,6 +162,9 @@ kig("https://git-scm.com/book/en/v2/images/distributed.png")
 ```
 
 ### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility) repository for this workshop !
+
+
+<span class='server'>`r rfa("github")` `r rfa("gitlab")`</span>
 
 ???
 
@@ -417,6 +419,8 @@ renv::restore()
 
 --
 
+<br>
+
 ## Again, with an R package, everything goes smoothly
 
 ```R
@@ -429,30 +433,113 @@ start thinking about OS agnosticism
 
 
 ---
-# Archive your repository
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-- [https://zenodo.org/](Zenodo)
+> Containers are a standardized unit of software that allows developers to
+> isolate their app from its environment, solving the “it works on my machine”
+> headache. 
+
+`r rfa("link")` https://www.docker.com/why-docker
 
 
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{R, echo = FALSE}
-# # Dockerize
-#
-# - [docker](https://www.docker.com/)
-#
-# ---
-# # Archive
-#
-# - reference [https://zenodo.org/](Zenodo)
-#
-# ---
-# # Holepunch
-#
-# - once set up o GH
-#
-# https://github.com/karthik/holepunch
-#
-# https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
-# https://github.com/ropensci/targets
-# https://github.com/wlandau/targets-minimal
+```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+kig("img/contain1.png")
 ```
+
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
+
+```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+kig("img/contain2.png")
+```
+
+
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
+
+```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+kig("img/contain3.png")
+```
+
+
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
+
+```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+kig("img/contain4.png")
+```
+
+
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
+
+```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+kig("img/contain5.png")
+```
+
+
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
+
+```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+kig("img/contain6.png")
+```
+
+
+---
+# Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
+
+
+###  docker allows you 
+
+- to create images (via docker file)
+
+- to use images 
+
+<br>
+
+--
+
+`r rfa("github")` https://github.com/rocker-org/rocker
+
+--
+
+```sh
+$ docker run --rm -ti rocker/r-base
+```
+
+--
+
+Run your code directly in the container!
+
+
+
+
+---
+# Archive your code/data with [Zenodo](https://zenodo.org/)
+
+
+```{r, echo = FALSE, out.width = "80%", purl = FALSE}
+kig("img/zenodo.png")
+```
+
+
+
+---
+# Holepunch
+
+> `holepunch` will read the contents of your R project on GitHub, create a DESCRIPTION file with all dependencies, write a Dockerfile, add a badge to your README, and build a Docker image. Once these 4 steps are complete, any reader can click the badge and within minutes, be dropped into a free, live, RStudio server.
+
+`r rfa("github")` https://github.com/karthik/holepunch
+
+--
+
+### - Uses [Binder](https://mybinder.org/) (GitHub repo ==> Docker image) + RStudio server.
+
+--
+
+
+### - Example: `r rfa("github")` [HomogenFishOntario](https://github.com/McCannLab/HomogenFishOntario)!

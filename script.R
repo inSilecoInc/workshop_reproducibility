@@ -203,46 +203,6 @@ kig <- function(...) knitr::include_graphics(...)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## ---- echo = FALSE------------------------------------------------------------
-# # Dockerize
-#
-# - [docker](https://www.docker.com/)
-#
-# ---
-# # Archive
-#
-# - reference [https://zenodo.org/](Zenodo)
-#
-# ---
-# # Holepunch
-#
-# - once set up o GH
-#
-# https://github.com/karthik/holepunch
-#
-# https://books.ropensci.org/targets/walkthrough.html#about-this-minimal-example
-# https://github.com/ropensci/targets
-# https://github.com/wlandau/targets-minimal
-
-
-
 ## ---- child = "partResources.Rmd"---------------------------------------------
 
 ## ---- echo = FALSE, out.width = "70%"-----------------------------------------
