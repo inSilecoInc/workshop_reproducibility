@@ -126,6 +126,11 @@ head(penguins)
 
 
 
+## ---- eval = FALSE------------------------------------------------------------
+## install.packages("tinytex")
+## tinytex::install_tinytex()
+
+
 ## -----------------------------------------------------------------------------
 str(knitr::opts_chunk$get())
 
