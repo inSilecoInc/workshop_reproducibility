@@ -25,7 +25,7 @@ kig("img/degree_repro.png")
 ---
 # Resources `r rfa("link")`
 
-### Reproducibility
+## Reproducibility
 
 - [Barba-group reproducibility syllabus](https://medium.com/hackernoon/barba-group-reproducibility-syllabus-e3757ee635cf#.h603izuwo)
 - [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12.full)
@@ -39,7 +39,7 @@ Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
 ---
 # Resources `r rfa("link")`
 
-### OSF
+## Open Science Framework
 
 - [COS: Strategic Plan, v2.0](https://docs.google.com/document/d/1sqz3appQ73vqa6fP1Gy8KK8HZpotoSGaiJC1XQuvREI/edit)
 - [50 cancer studies](https://www.sciencemag.org/news/2018/07/plan-replicate-50-high-impact-cancer-papers-shrinks-just-18)
@@ -49,26 +49,33 @@ Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
 ---
 # Resources `r rfa("link")`
 
-### Research Compendium 
+## Research Compendium 
 
 - [rOpenSci](https://ropensci.org/)
+- [rOpenSci Packages: Development, Maintenance, and Peer Review](https://devguide.ropensci.org/index.html)
 - [R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
 - [Reproducible Analysis With R](https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/)
-- [Touchdown your research with Rmarkdown](https://insileco.github.io/ResearchDown/#1)
 - [Formation FRB-Cesab & GDR EcoStat (fr)](https://frbcesab.github.io/datatoolbox/index.html#1)
 - [Research Compendium](https://research-compendium.science/) landing page
 - [rrrpkg](https://github.com/ropensci/rrrpkg)
 - [rrtools](https://github.com/benmarwick/rrtools)
 
 
+---
+# Resources `r rfa("link")`
 
+## R Markdown
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+- [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
+- [Touchdown your research with R Markdown](https://insileco.github.io/ResearchDown/#1)
 
 ---
 # inSileco
 
 <!-- LAST SLIDE -->
 
-- inSileco https://insilecoinc.github.io/
+- inSileco `r emj("construction")` https://insilecoinc.github.io/ `r emj("construction")`
 - David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
 - Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
 - Steve Vissault [`r rfa("envelope")`](s.vissault@yahoo.fr)
