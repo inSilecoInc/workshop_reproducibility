@@ -857,6 +857,9 @@ To insert an external image, use: `![](url_to_image)`
 
 ![](https://media.giphy.com/media/MkGyW2cOH7uhO/giphy.gif)
 
+.font90[
+`r rfa("exclamation-triangle")` Beware that not all graphics can be loaded in a pdf and that images should be loaded locally for pdf documents.
+]
 
 ---
 
@@ -1285,7 +1288,7 @@ head(penguins)
 
   - Add paragraphs including normal and formatted text (italic, bold)
 
-  - Add artwork from @allison_horst on palmer penguins found on the `palmerpenguins` R Package GitHub repository (https://github.com/allisonhorst/palmerpenguins) as an external image
+  - Add artwork from @allison_horst on palmer penguins found on the `palmerpenguins` R Package GitHub repository (https://github.com/allisonhorst/palmerpenguins) as a local image (for pdf output).
 
   - Add a footnote to the artwork that states: *"Artwork by @allison_horst"*
 
@@ -1316,6 +1319,16 @@ head(penguins)
 ```{r, echo = FALSE, purl = FALSE}
 countdown::countdown(minutes = 30, seconds = 0)
 ```
+
+---
+
+# Exercise
+
+## Solution
+
+Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise1.rmd)
+
+
 
 ---
 
@@ -2071,6 +2084,14 @@ class: inverse, center, middle
 ```{r, echo = FALSE, purl = FALSE}
 countdown::countdown(minutes = 30, seconds = 0)
 ```
+
+---
+
+# Exercise
+
+## Solution
+
+Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise2.rmd)
 
 
 

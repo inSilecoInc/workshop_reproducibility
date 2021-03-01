@@ -5,6 +5,8 @@ date: 2021-03-01
 output:
   html_document:
     toc: true
+  pdf_document:
+    toc: true
   word_document:
     toc: true
 ---
@@ -23,7 +25,7 @@ Numbered list of numbers
 
 > A man who dares to waste one hour of time has not discovered the value of life.
 
-![](https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/man/figures/lter_penguins.png)
+![](img/lter_penguins.png)
 
 Artistic drawing of palmer penguins.[^art]
 
@@ -44,5 +46,4 @@ The [penguins dataset](https://github.com/allisonhorst/palmerpenguins) contains 
 plot(x = penguins$flipper_length_mm, y = penguins$body_mass_g, pch = 20, col = '#32c4c4',
      main = 'Penguin body mass as a function of flipper length',
      xlab = 'Flipper length (mm)', ylab = 'Body mass (g)')
-
 ```
