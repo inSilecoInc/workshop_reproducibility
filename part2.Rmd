@@ -1326,7 +1326,7 @@ countdown::countdown(minutes = 30, seconds = 0)
 
 ## Solution
 
-Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise1.rmd)
+<!-- Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise1.rmd) -->
 
 
 
@@ -2091,7 +2091,7 @@ countdown::countdown(minutes = 30, seconds = 0)
 
 ## Solution
 
-Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise2.rmd)
+<!-- Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise2.rmd) -->
 
 
 
