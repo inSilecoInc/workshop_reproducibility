@@ -1,5 +1,8 @@
 # Workshop-specific files
 
+*.svg
+!img/container.svg
+!img/workflow.svg
 *.html
 *.pdf
 *.docx
