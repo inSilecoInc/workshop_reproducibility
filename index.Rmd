@@ -37,7 +37,7 @@ kig <- function(...) knitr::include_graphics(...)
 class: title-slide, middle
 
 
-## .font140[`r icon::fontawesome("r-project")`eproducible Workflows]
+## .font140[`r rfa("r-project")`eproducible Workflows]
 
 <br>
 
@@ -50,6 +50,7 @@ class: title-slide, middle
   <br>
   .font200[
   [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility)
+  [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/raw/gh-pages/data_and_script.zip)
   <!-- [`r rfa("file-pdf")`](link_to_pdf_version) -->
   ]
 ]
@@ -81,11 +82,13 @@ class: inverse, center, middle
 
 <br>
 
-### 1. Understand the importance of reproducible research,
+### 1. Understand the importance of reproducible research.
 
-### 2. Understand how R can be useful for reproducible research
+### 2. Understand how R can be useful for reproducible research.
 
-### 3. Create a simple R Markdown document including a reproducible analysis 
+### 3. Set up a minimal reproducible workflow.
+
+### 4. Create a simple R Markdown document including a reproducible analysis.
 
 
 

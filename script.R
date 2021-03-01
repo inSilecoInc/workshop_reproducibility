@@ -19,68 +19,6 @@ kig <- function(...) knitr::include_graphics(...)
 
 ## ---- child = "part1.Rmd"-----------------------------------------------------
 
-## ---- echo = FALSE, out.width = "50%"-----------------------------------------
-kig("img/r_words.png")
-
-
-## ---- echo = FALSE, out.width = "80%"-----------------------------------------
-kig("img/terminos.png")
-
-
-## ---- echo = FALSE, out.width = "50%"-----------------------------------------
-kig("img/cover_rrs.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/knowledge1.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/knowledge2.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/knowledge3.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/knowledge2.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/knowledge4.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/workflow1.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/workflow2.png")
-
-
-## ---- echo = FALSE, out.width = "67%"-----------------------------------------
-kig("img/replic_osf.png")
-
-
-## ---- echo = FALSE, out.width = "90%"-----------------------------------------
-kig("img/replic_osf2.png")
-
-
-## ---- echo = FALSE, out.width = "65%"-----------------------------------------
-kig("img/retractation_index.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/workflow2.png")
-
-
-## ---- echo = FALSE, out.width = "55%"-----------------------------------------
-kig("img/workflow3.png")
-
-
-## ---- echo = FALSE, out.width = "80%"-----------------------------------------
-kig("img/spectrum.png")
 
 
 
@@ -240,40 +178,41 @@ ggplot(data = iris,
 
 ## ---- child = "part3.Rmd"-----------------------------------------------------
 
-## ---- echo = FALSE, out.width = "80%"-----------------------------------------
-kig("img/spectrum.png")
+## ----setup3, include = FALSE--------------------------------------------------
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  dev = "png",
+  dpi = 108,
+  fig.width = 6,
+  fig.height = 4.5,
+  fig.align = 'center',
+  width = 120
+)
+options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
+rfa <- function(...) icon::fontawesome(...)
+emj <- function(...) emo::ji(...)
+kig <- function(...) knitr::include_graphics(...)
 
 
-## ---- echo = FALSE, out.width = "50%"-----------------------------------------
-kig("https://git-scm.com/book/en/v2/images/local.png")
 
 
-## ---- echo = FALSE, out.width = "50%"-----------------------------------------
-kig("https://git-scm.com/book/en/v2/images/centralized.png")
 
 
-## ---- echo = FALSE, out.width = "42%"-----------------------------------------
-kig("https://git-scm.com/book/en/v2/images/distributed.png")
 
 
-## ---- echo = FALSE, out.width = "42%"-----------------------------------------
-kig("https://git-scm.com/book/en/v2/images/distributed.png")
 
 
-## ---- echo = FALSE, out.width = "42%"-----------------------------------------
-kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 
 
-## ---- echo = FALSE, out.width = "42%"-----------------------------------------
-kig("https://raw.githubusercontent.com/r-lib/devtools/master/man/figures/logo.svg")
 
 
-## ---- echo = FALSE, out.width = "42%"-----------------------------------------
-kig("https://raw.githubusercontent.com/r-lib/usethis/master/man/figures/logo.png")
 
 
-## ---- echo = FALSE, out.width = "50%"-----------------------------------------
-kig("https://raw.githubusercontent.com/rstudio/renv/master/man/figures/logo.svg")
+
+
 
 
 ## ---- echo = FALSE------------------------------------------------------------
