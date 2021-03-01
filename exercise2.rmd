@@ -6,8 +6,12 @@ output:
   html_document:
     toc: true
     theme: lumen
+  pdf_document:
+    toc: true
   word_document:
     toc: true
+bibliography: mybiblio.bib
+csl: the-american-naturalist.csl
 ---
 
 # Section 1 title
@@ -22,13 +26,15 @@ Numbered list of numbers
 2. two
 3. three
 
+Here is a citation [@galbraith2012].
+
 > A man who dares to waste one hour of time has not discovered the value of life.
 
-![](https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/man/figures/lter_penguins.png)
+![](img/lter_penguins.png)
 
 Artistic drawing of palmer penguins.[^art]
 
-```{r}
+```{r table, echo=FALSE}
 library(palmerpenguins)
 data(penguins)
 knitr::kable(penguins[1:20, ])
@@ -41,9 +47,10 @@ knitr::kable(penguins[1:20, ])
 The [penguins dataset](https://github.com/allisonhorst/palmerpenguins) contains data on `r nrow(penguins)` individuals, `r length(unique(penguins$species))` species, and from `r length(unique(penguins$island))` islands. Across individuals, the mean flipper length is `r mean(penguins$flipper_length_mm)`.
 
 
-```{r}
+```{r figure, echo=FALSE, fig.width=6, fig.height=6}
 plot(x = penguins$flipper_length_mm, y = penguins$body_mass_g, pch = 20, col = '#32c4c4',
      main = 'Penguin body mass as a function of flipper length',
      xlab = 'Flipper length (mm)', ylab = 'Body mass (g)')
-
 ```
+
+# References
