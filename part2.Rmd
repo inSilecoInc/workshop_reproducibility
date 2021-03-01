@@ -1321,6 +1321,19 @@ countdown::countdown(minutes = 30, seconds = 0)
 ```
 
 ---
+# Exercise
+
+## Task
+
+`r rfa("info-circle")` Cannot render `.pdf` file, try:
+
+```{R, eval = FALSE}
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+
+---
 
 # Exercise
 
