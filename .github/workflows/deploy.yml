@@ -25,7 +25,7 @@ jobs:
           Rscript -e "remotes::install_deps()"
       - name: Build presentation
         run: |
-          icon::download_fontawesome()
+          icons::download_fontawesome()
           rmarkdown::render("index.Rmd", "all")
         shell: Rscript {0}
         
