@@ -31,7 +31,7 @@ kig("img/degree_repro.png")
 - [What does research reproducibility mean?](https://stm.sciencemag.org/content/8/341/341ps12.full)
 - [Retracted Science and the Retraction Index](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187237/)
 - [Questionable research practices in ecology and evolution](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
-- [GitHUb thread](https://github.com/ReScience/ReScience-article/issues/5)
+- [An interesting GiHub thread](https://github.com/ReScience/ReScience-article/issues/5)
 - [Ten Simple Rules for Reproducible Computational
 Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285)
 
@@ -66,16 +66,31 @@ Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi
 
 ## R Markdown
 
+### `r emj("uk")`
+
 - [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 - [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)
 - [Touchdown your research with R Markdown](https://insileco.github.io/ResearchDown/#1)
+- [R MarkdownReference Guide](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+- [Writing dynamic and reproducible documents](https://frbcesab.github.io/datatoolbox/courses/rmarkdown/index.html)
+
+### `r emj("fr")`
+
+- [Utiliser R Markdown pour créer des documents dynamiques](https://kevcaz.github.io/Rmarkdowndocfr/)
+- https://nicolascasajus.fr/mastering-markdown/#67
+
+
 
 ---
 # inSileco
 
 <!-- LAST SLIDE -->
 
-- inSileco `r emj("construction")` https://insilecoinc.github.io/ `r emj("construction")`
+- `r rfa("globe")` inSileco website `r emj("construction")` https://insilecoinc.github.io/ `r emj("construction")`
+- `r rfa("github")` https://github.com/inSilecoInc
+- `r rfa("blog")` https://github.com/inSileco/inSileco.github.io
+
+
 - David Beauchesne [`r rfa("envelope")`](mailto:david.beauchesne@hotmail.com)
 - Kevin Cazelles [`r rfa("envelope")`](mailto:kevin.cazelles@gmail.com)
 - Steve Vissault [`r rfa("envelope")`](s.vissault@yahoo.fr)

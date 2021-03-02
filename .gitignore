@@ -14,6 +14,7 @@ index_cache/
 script.R
 demo/min_workflow/
 demo/less_min_workflow/
+demo/targets_workflow/
 
 # MacOS
 .DS_Store
