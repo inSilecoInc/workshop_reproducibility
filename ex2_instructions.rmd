@@ -1,0 +1,33 @@
+---
+output: html_document
+---
+
+# Instructions
+
+**1)** Open the `.rmd` file that you created yesterday;
+
+**2)** Give the labels `table` and `figure` to the code chunks;
+
+**3)** Modify code chunk options so that the code is not visible in the report;
+
+**4)** Modify `figure` code chunk options to set figure size and include a caption;
+
+**5)** Format `table` using `knitr::kable`. For more advanced users, you can use the [`kableExtra`](https://cran.r-project.org/package=kableExtra) R Package to format the table
+
+**6)** Using your reference manager, export a bibliographic file in BiBTeX format titled `mybiblio.bib` and store it in the same folder as your `.rmd` file;
+
+**7)** Include `mybiblio.bib` to the **YAML** header;
+
+**8)** Within the document body, add citations from your bibliographic files using proper citation keys `@id`;
+
+**9)** Change the default citation format (Chicago style) for the format from *The American Naturalist*:
+
+  - Download the `csl` file from [https://www.zotero.org/styles](https://www.zotero.org/styles) and store it in the same folder as your `.rmd` file
+
+  - Include `new-style.csl` to the **YAML** header
+
+**10)** Add a section header at the end for your reference list
+
+**11)** For the html document output, use the `lumen` theme
+
+**12)** Render `.html`, `.pdf` and `.docx` documents.

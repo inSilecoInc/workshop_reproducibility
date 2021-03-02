@@ -990,6 +990,34 @@ class: inverse, center, middle
 
 class: inverse, center, middle
 
+#  Day 2
+
+<html><div style='float:left'></div><hr color='#ffdd55'style="margin-top: -60px;" size=1px width=720px></html>
+
+
+---
+
+
+# What we did yesterday
+
+✔️ **Document your document**: use YAML to set up meaningful metadata
+
+✔️ **Style your document**: use YAML to add options to your chosen output format
+
+✔️ **Organize your text**: use markdown headers with `#`
+
+✔️ **Style your text**: use markdown **bold**, *italics*, `r rfa("list-ul")` bullets, `r rfa("list-ol")` lists, hyperlinks, ...
+
+✔️ **Export your document**: use `rmarkdown::render()`
+
+
+
+
+
+---
+
+class: inverse, center, middle
+
 #  `r rfa("code")` Code chunks
 
 <html><div style='float:left'></div><hr color='#ffdd55'style="margin-top: -60px;" size=1px width=720px></html>
@@ -1184,36 +1212,6 @@ class: inverse, center, middle
 ## .font150[`r icons::fontawesome("question-circle")`]
 
 
----
-
-class: inverse, center, middle
-
-# Wrap up
-
-![:custom_hr]()
-
-
-
----
-
-
-# Wrapping up for today
-
-✔️ **Document your document**: use YAML to set up meaningful metadata
-
-✔️ **Style your document**: use YAML to add options to your chosen output format
-
-✔️ **Organize your text**: use markdown headers with `#`
-
-✔️ **Style your text**: use markdown **bold**, *italics*, `r rfa("list-ul")` bullets, `r rfa("list-ol")` lists, hyperlinks, ...
-
-✔️ **Organize your code**: use `knitr` chunk labels
-
-✔️ **Export your document**: use `rmarkdown::render()`
-
-✔️ **Enjoy a simplified life** .font50[most of the time]
-
-
 
 ---
 
@@ -1342,35 +1340,6 @@ tinytex::install_tinytex()
 <!-- Load solution file here: [`r rfa("database")`](https://github.com/inSilecoInc/workshop_reproducibility/blob/main/exercise1.rmd) -->
 
 
-
----
-
-class: inverse, center, middle
-
-# This is it for today!
-
-![:custom_hr]()
-
-
-
----
-
-
-# What we did yesterday
-
-✔️ **Document your document**: use YAML to set up meaningful metadata
-
-✔️ **Style your document**: use YAML to add options to your chosen output format
-
-✔️ **Organize your text**: use markdown headers with `#`
-
-✔️ **Style your text**: use markdown **bold**, *italics*, `r rfa("list-ul")` bullets, `r rfa("list-ol")` lists, hyperlinks, ...
-
-✔️ **Organize your code**: use `knitr` chunk labels
-
-✔️ **Export your document**: use `rmarkdown::render()`
-
-✔️ **Enjoy a simplified life** .font50[most of the time]
 
 
 
