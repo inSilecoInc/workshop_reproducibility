@@ -47,7 +47,7 @@ knitr::kable(penguins[1:20, ])
 The [penguins dataset](https://github.com/allisonhorst/palmerpenguins) contains data on `r nrow(penguins)` individuals, `r length(unique(penguins$species))` species, and from `r length(unique(penguins$island))` islands. Across individuals, the mean flipper length is `r mean(penguins$flipper_length_mm)`.
 
 
-```{r figure, echo=FALSE, fig.width=6, fig.height=6}
+```{r figure, echo=FALSE, fig.width=6, fig.height=6, fig.cap="This is a figure"}
 plot(x = penguins$flipper_length_mm, y = penguins$body_mass_g, pch = 20, col = '#32c4c4',
      main = 'Penguin body mass as a function of flipper length',
      xlab = 'Flipper length (mm)', ylab = 'Body mass (g)')
