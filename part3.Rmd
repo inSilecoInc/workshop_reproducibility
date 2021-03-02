@@ -519,16 +519,6 @@ Run your code directly in the container!
 
 
 ---
-# Archive your code/data with [Zenodo](https://zenodo.org/)
-
-
-```{r, echo = FALSE, out.width = "80%", purl = FALSE}
-kig("img/zenodo.png")
-```
-
-
-
----
 # Holepunch
 
 > `holepunch` will read the contents of your R project on GitHub, create a DESCRIPTION file with all dependencies, write a Dockerfile, add a badge to your README, and build a Docker image. Once these 4 steps are complete, any reader can click the badge and within minutes, be dropped into a free, live, RStudio server.
@@ -543,3 +533,14 @@ kig("img/zenodo.png")
 
 
 ### - Example: `r rfa("github")` [HomogenFishOntario](https://github.com/McCannLab/HomogenFishOntario)!
+
+
+
+---
+# Archive your code/data with [Zenodo](https://zenodo.org/)
+
+
+```{r, echo = FALSE, out.width = "80%", purl = FALSE}
+kig("img/zenodo.png")
+```
+
