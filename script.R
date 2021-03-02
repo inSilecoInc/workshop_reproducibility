@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
   width = 120
 )
 options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
-rfa <- function(...) icon::fontawesome(...)
+rfa <- function(...) icons::fontawesome(...)
 emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
 
@@ -197,9 +197,37 @@ knitr::opts_chunk$set(
   width = 120
 )
 options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
-rfa <- function(...) icon::fontawesome(...)
+rfa <- function(...) icons::fontawesome(...)
 emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## ---- eval = FALSE------------------------------------------------------------
+## library(targets)
+## library(tarchetypes)
+## rsrc <- lapply(list.files("R", full.names = TRUE), source)
+## options(tidyverse.quiet = TRUE)
+## tar_option_set(packages = c("weathercan", "tidyverse"))
+## list(
+##   tar_target(data, get_data()),
+##   tar_target(tab1, create_tab1(data)),
+##   tar_target(fig1, create_fig1(data)),
+##   tar_render(report, "ms/ms.Rmd")
+## )
 
 
 

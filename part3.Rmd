@@ -26,12 +26,11 @@ knitr::opts_chunk$set(
   width = 120
 )
 options(htmltools.dir.version = FALSE, htmltools.preserve.raw = FALSE)
-rfa <- function(...) icon::fontawesome(...)
+rfa <- function(...) icons::fontawesome(...)
 emj <- function(...) emo::ji(...)
 kig <- function(...) knitr::include_graphics(...)
 ```
 
----
 
 ---
 
@@ -43,7 +42,7 @@ class: inverse, center, middle
 
 ## `r rfa("database")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("r-project")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("cogs")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("file")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("sync-alt")`
 
-## `r icon::fontawesome("clock")` ~ 30min
+## `r icons::fontawesome("clock")` ~ 30min
 
 
 ???
@@ -66,6 +65,14 @@ kig("img/spectrum.png")
 ### Towards full reproducibility, technologies are getting more complex
 
 
+---
+# Gold standard
+
+<br>
+
+```{R, echo = FALSE, out.width = "90%", purl = FALSE}
+kig("img/pool.png")
+```
 
 
 ???
@@ -85,7 +92,7 @@ Coding a lot
 
 <br>
 
-### **Keep track of code changes...**
+### **Keep track of code changes!**
 
 --
 
@@ -135,24 +142,11 @@ kig("https://git-scm.com/book/en/v2/images/distributed.png")
 `r rfa("book")` Chacon & Straub (2014) [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
 
----
-# Version control with Git `r emj("computer")`
+<br>
 
-
-```sh
-$ git init -b main
-$ git add -A
-$ git commit -m 'initial commit'
-# do changes
-$ git add R/pipeline.R
-$ git commit -m 'inform user when pipeline() ends'
-# see history
-$ git log
-$ git checkout HEAD~1
-# git revert HEAD~1..HEAD if going back needed
-```
-
-
+- [GitKraken](https://www.gitkraken.com/)
+- [GitHub Desktop](https://desktop.github.com/)
+- R Studio
 
 ---
 # Version control with Git + GitHub/Gitlab
@@ -170,7 +164,8 @@ kig("https://git-scm.com/book/en/v2/images/distributed.png")
 
 push and pull
 show repo
-
+git log 
+git pulll
 
 
 ---
@@ -178,45 +173,84 @@ show repo
 
 --
 
-### 1. Create a file `makefile` (or `Makfile`)
-
-<br>
+### 1. Create a file `makefile` (or `Makefile`) [`r rfa("file")`](https://raw.githubusercontent.com/inSilecoInc/workshop_reproducibility/main/demo/makefile)
 
 
-### 2. Write down what it needs to do
+--
+
+
+### 2. Write down what it needs to do (steps of your workflow)
 
 ```sh
-ms: ms/ms.Rmd
+all: ms code
+	
+ms: code ms/ms.Rmd 
 	Rscript -e 'rmarkdown::render("ms/ms.Rmd")'
+
+code: 
+	Rscript -e 'lapply(list.files("R", full.names = TRUE), source); pipeline()'
 ```
 
-<br>
+--
 
-### 3. Use `make` e.g. `make ms`
+### 3. Use `make` command e.g. `make` or `make ms`
 
-
----
-# Use a pipeline toolkit: [GNU Make](https://www.gnu.org/software/make/manual/make.html) `r emj("computer")`
-
-<br>
 
 --
 
 `r rfa("blog")` Sachin Patil (2018) [What is a Makefile and how does it work?](https://opensource.com/article/18/8/what-how-makefile)
 
 
+???
+
+Not R-specific
+
 
 ---
 # Use a pipeline toolkit: [targets](https://www.gnu.org/software/make/manual/make.html)
 
+
+.pull-left[
+### Successor of [drake](https://github.com/ropensci/drake)
+
 > The targets package is a Make-like pipeline toolkit for Statistics and data science in R.
 
-```{r, echo = FALSE, out.width = "42%", purl = FALSE}
-kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
-```
+<br>
 
 `r rfa("book")` [The targets R Package User Manual](https://books.ropensci.org/targets/index.html#motivation)
 
+]
+
+.pull-right[
+
+```{r, echo = FALSE, out.width = "85%", purl = FALSE}
+kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
+```
+]
+
+
+---
+# Use a pipeline toolkit: [targets](https://www.gnu.org/software/make/manual/make.html) 
+
+### 1. Create a `_targets.R` file at the root of your repository [`r rfa("folder")`](https://github.com/inSilecoInc/workshop_reproducibility/raw/main/demo/targets_workflow.zip)
+
+```{R, eval = FALSE}
+library(targets)
+library(tarchetypes)
+rsrc <- lapply(list.files("R", full.names = TRUE), source)
+options(tidyverse.quiet = TRUE)
+tar_option_set(packages = c("weathercan", "tidyverse"))
+list(
+  tar_target(data, get_data()),
+  tar_target(tab1, create_tab1(data)),
+  tar_target(fig1, create_fig1(data)),
+  tar_render(report, "ms/ms.Rmd")
+)
+```
+
+--
+
+### 2. use `tar_make()`
 
 
 
@@ -299,7 +333,7 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 
 --
 
-- This is a very good avenue to go even further
+- This is a very good avenue to go further
 
 
 ???
@@ -415,7 +449,7 @@ renv::restore()
 
 --
 
-### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility/actions) repository for this workshop !
+### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility/actions) repository for this workshop!
 
 --
 
@@ -445,14 +479,14 @@ start thinking about OS agnosticism
 ---
 # Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+```{r, echo = FALSE, out.width = "45%", purl = FALSE}
 kig("img/contain1.png")
 ```
 
 ---
 # Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+```{r, echo = FALSE, out.width = "45%", purl = FALSE}
 kig("img/contain2.png")
 ```
 
@@ -460,7 +494,7 @@ kig("img/contain2.png")
 ---
 # Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+```{r, echo = FALSE, out.width = "45%", purl = FALSE}
 kig("img/contain3.png")
 ```
 
@@ -468,7 +502,7 @@ kig("img/contain3.png")
 ---
 # Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+```{r, echo = FALSE, out.width = "45%", purl = FALSE}
 kig("img/contain4.png")
 ```
 
@@ -476,7 +510,7 @@ kig("img/contain4.png")
 ---
 # Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+```{r, echo = FALSE, out.width = "45%", purl = FALSE}
 kig("img/contain5.png")
 ```
 
@@ -484,7 +518,7 @@ kig("img/contain5.png")
 ---
 # Use a container with [Docker `r rfa("docker")`](https://www.docker.com/)
 
-```{r, echo = FALSE, out.width = "40%", purl = FALSE}
+```{r, echo = FALSE, out.width = "45%", purl = FALSE}
 kig("img/contain6.png")
 ```
 
@@ -495,15 +529,15 @@ kig("img/contain6.png")
 
 ###  docker allows you 
 
-- to create images (via docker file)
+- to create images (via dockerfiles)
 
-- to use images 
+- to use images!
 
 <br>
 
 --
 
-`r rfa("github")` https://github.com/rocker-org/rocker
+`r rfa("github")` [rocker-org/rocker](https://github.com/rocker-org/rocker)
 
 --
 

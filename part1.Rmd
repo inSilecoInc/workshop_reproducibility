@@ -11,7 +11,7 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## `r icon::fontawesome("clock")` ~ 30min
+## `r icons::fontawesome("clock")` ~ 30min
 
 
 ???
@@ -421,7 +421,7 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## .font150[`r icon::fontawesome("question-circle")`]
+## .font150[`r icons::fontawesome("question-circle")`]
 
 
 
@@ -435,7 +435,7 @@ class: inverse, center, middle
 
 ## `r rfa("database")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("r-project")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("cogs")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("file")` &nbsp; `r rfa("arrow-right")` &nbsp; `r rfa("sync-alt")`
 
-## `r icon::fontawesome("clock")` ~ 20min
+## `r icons::fontawesome("clock")` ~ 20min
 
 
 ???
@@ -671,4 +671,4 @@ class: inverse, center, middle
 
 ![:custom_hr]()
 
-## .font150[`r icon::fontawesome("question-circle")`]
+## .font150[`r icons::fontawesome("question-circle")`]
