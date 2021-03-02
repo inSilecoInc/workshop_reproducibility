@@ -173,7 +173,7 @@ git pulll
 
 --
 
-### 1. Create a file `makefile` (or `Makfile`) [`r rfa("file")`](XXX)
+### 1. Create a file `makefile` (or `Makefile`) [`r rfa("file")`](https://raw.githubusercontent.com/inSilecoInc/workshop_reproducibility/main/demo/makefile)
 
 
 --
@@ -232,7 +232,7 @@ kig("https://docs.ropensci.org/targets/reference/figures/logo.png")
 ---
 # Use a pipeline toolkit: [targets](https://www.gnu.org/software/make/manual/make.html) 
 
-### 1. Create a `_targets.R` file at the root of your repository [`r rfa("folder")`](XXX)
+### 1. Create a `_targets.R` file at the root of your repository [`r rfa("folder")`](https://github.com/inSilecoInc/workshop_reproducibility/raw/main/demo/targets_workflow.zip)
 
 ```{R, eval = FALSE}
 library(targets)
@@ -449,7 +449,7 @@ renv::restore()
 
 --
 
-### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility/actions) repository for this workshop !
+### e.g. The [`r rfa("github")`](https://github.com/inSilecoInc/workshop_reproducibility/actions) repository for this workshop!
 
 --
 
